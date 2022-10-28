@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Agency - Travel Agency</title>
+    <link rel="shortcut icon"
+        href="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Insert-hyperlink-icon.png"
+        type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./contact.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header>
+        <img class="header__logo"
+            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+
+        <nav id="headerMenu" class="header__menu">
+            <ul class="header__menu--list">
+                <li>
+                    <a class="header__menu--items" href="">Home </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Trips Filter </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">ABout Us </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Blog </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="header__account">
+            <ul class="header__account--list">
+                <i id="fa-bars" class="fa-solid fa-bars"></i>
+                <li title="Notification" class="header__account--item">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li title="Account" class="header__account--item">
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body logIn-modal-body">
+                    <form class="logIn-form" action="">
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="username">Username</label>
+                            <input class="logIn-input" id="logIn-username" type="text">
+                        </div>
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="password">Password</label>
+                            <input class="logIn-input" id="logIn-password" type="password">
+                        </div>
+                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="logIn-btn-container">
+                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
+                    </div>
+                    <div class="InsignUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signUp-modal-body">
+                    <form action="register">
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-username">Username<span
+                                    style="color: red;">*</span></label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div id="username-errorText" class="errorText"></div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-password">Password<span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
+                            <span onclick="showPassword()" id="showSignUpPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
+                            <span onclick="showSignUpPassword()" id="showConfirmPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
+                            <input class="signUp-input" id="signUp-accountName" type="text">
+                        </div>
+                        <div id="password-errorText" class="errorText"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Header -->
+
+    <!-- Your Content Here -->
+
+    <div id="con">
+        <h1 class="contact">Contact us</h1>
+        <h4>Address</h4>
+        <p>123 East 26th Street, New York, NY 10011</p>
+        <h4>Phone</h4>
+        <a class="lienhe" href="tel:(+123)4567890">(+123)456-7890</a>
+        <h4>Email</h4>
+        <a class="lienhe" href="mailto:info.demo@demo.com">info.demo@demo.com</a>
+    </div>
+
+    <div id="form">
+
+        <form id="" method="post">
+
+            <div class="" id="name-form">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="" id="email-form">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" />
+            </div>
+
+            <div class="" id="number-form">
+                <label for="name">Phone No*</label>
+                <input type="number" id="number" name="number" />
+            </div>
+
+            <div class="" id="name-form">
+                <label for="name">Country*</label>
+                <input type="text" id="name" name="country" />
+            </div>
+
+            <div class="" id="name-form">
+                <label for="name">Subject*</label>
+                <input type="text" id="name" name="Subject" />
+            </div>
+
+            <div class="" id="message-form">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer__widget">
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title contactInfo">Contact Info</h2>
+                <div class="widgetTitle-line"></div>
+                <nav class="textWidget">
+                    <p>Phone: +977-1-47012454</p>
+                    <p>Email: info@xyz-adventure.com</p>
+                    <p>GPO Box : 5612, Thamel ,Kathmandu</p>
+                    <p>Fax Number: 503-555-1213</p>
+                </nav>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title destination">Destination</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nepal </a></li>
+                    <li><a class="footer__menu--item" href="http://"> India </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Tibet </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Maldives </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title activities">Activities</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Road Cycling </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural Tours </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Peak Climbing </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Jungle Safari </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title tripTypes">Trip Types</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nature Walk </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Child-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Dog-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyRight">
+            Powered by <a href="">C4EJS Gen 130</a> | Theme by <a href="">Team 1 - Group 3</a>
+        </div>
+
+    </footer>
+
+    <div class="footer__contact">
+        <div class="phone-email">
+            <div class="phone">
+                <a class="phoneEmail-link" href=""><i class="fa-solid fa-phone"></i> 02477705666</a>
+            </div>
+            <div class="email">
+                <a class="phoneEmail-link" href=""><i class="fa-regular fa-envelope"></i> contact@mindx.edu.vn</a>
+            </div>
+        </div>
+
+        <div class="social-navigation">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-airbnb"></i></a>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- End Footer -->
+
+    <script src="/HeaderFooter.js"></script>
+    <script src="./contact.js"></script>
+</body>
+
+</html>

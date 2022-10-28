@@ -48,28 +48,76 @@ function login() {
     let $logInUsername = document.getElementById('logIn-username').value;
     let $logInPassword = document.getElementById('logIn-password').value;
     let $logInErrorText = document.getElementById('logIn-errorText');
+    let $avtLogin = document.getElementById('avtLogin');
+    let $headerLogin = document.getElementById('headerLogin');
 
     fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/Account')
-    .then((response) => response.json())
-    .then((data) => {
-        let ischeck = false;
-
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].username == $logInUsername && data[i].password == $logInPassword) {
-                ischeck = true;
+        .then((response) => response.json())
+        .then((data) => {
+            let ischeck = false;
+            let stringAvtHTML = "";
+            let stringHeader = "";
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].username == $logInUsername && data[i].password == $logInPassword) {
+                    data[i].status = true;
+                    ischeck = true;
+                    stringHeader=`
+                //     stringAvtHTML = 
+                //     `
+                // <i id="fa-bars" class="fa-solid fa-bars"></i>
+                //     <li title="Notification" class="header__account--item">
+                //     <i class="fa-solid fa-bell"></i>
+                // </li>
+                // <li title="${data[i].displayName}" class="header__account--item">
+                //     <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                //     <img class="avt-login" src="${data[i].avt}" alt="">
+                //     </a> 
+                // </li>
+                //     `
+                 }
             }
-        }
-        console.log(ischeck);
-        if (ischeck == true) {
-            window.location.assign("http://127.0.0.1:5500/Hieu/home3.html")
-        } else {
-            alert("Username or Password Incorrect");
-        }
-    });
+            if (ischeck == true) {
+                window.location.assign("http://127.0.0.1:5500/Hieu/home3.html")
+                $headerLogin.innerHTML = stringHeader;
+            } else {
+                alert("Username or Password Incorrect");
+            }
+        });
 
     // if ($logInUsername.value == '') {
     //     $logInErrorText.innerHTML = 'Username must not be blank';
     // }
+}
+function register(){
+    let $userName = document.getElementById("signUp-username").value;
+    let $userPassword = document.getElementById("signUp-Password").value;
+    let $displayName = document.getElementById("signUp-accountName").value;
+    let $urlAvt = document.getElementById("signUp-avtUrl").value;
+        const newAccount = {
+            username: $userName,
+            password: $userPassword,
+            displayName: $displayName,
+            role: "user",
+            avt: $urlAvt,
+            status: false,
+        }
+
+        fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/Account', {
+            method: 'POST',
+            body: JSON.stringify(newAccount),
+            headers: {
+                Accept: 'application/json, text/plain, */*',
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                alert("Add successfully")
+                window.location.assign("http://127.0.0.1:5500/Login/login.html");
+            });
+
 }
 
 function signUpUsernameErrorText() {

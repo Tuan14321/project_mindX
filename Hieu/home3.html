@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,142 +21,153 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="HeaderFooter.css">
     <link rel="stylesheet" href="./home3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Home Page</title>
+    <link rel="stylesheet" href="./repomsivehome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HOME</title>
 </head>
 
 <body>
-    
+
 </body>
+
 </html>
+
 <body>
     <!-- Header -->
+    <div class="headerLogin">
+        <header>
+            <img class="header__logo"
+                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
 
-    <header>
-        <img class="header__logo"
-            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+            <nav id="headerMenu" class="header__menu">
+                <ul class="header__menu--list">
+                    <li>
+                        <a class="header__menu--items" href="">Home </a>
+                    </li>
+                    <li>
+                        <a class="header__menu--items" href="">Trips Filter </a>
+                    </li>
+                    <li>
+                        <a class="header__menu--items" href="">ABout Us </a>
+                    </li>
+                    <li>
+                        <a class="header__menu--items" href="">Blog </a>
+                    </li>
+                    <li>
+                        <a class="header__menu--items" href="">Contact </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav id="headerMenu" class="header__menu">
-            <ul class="header__menu--list">
-                <li>
-                    <a class="header__menu--items" href="">Home </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Trips Filter </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">ABout Us </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Blog </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Contact </a>
-                </li>
-            </ul>
-        </nav>
+            <nav class="header__account">
+                <ul class="header__account--list">
+                    <i style="display: none;" id="fa-bars" class="fa-solid fa-bars"></i>
+                    <li title="Notification" class="header__account--item">
+                        <i class="fa-solid fa-bell"></i>
+                    </li>
+                    <li title="Account" class="header__account--item">
+                        <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle"
+                            role="button">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav class="header__account">
-            <ul class="header__account--list">
-                <i style="display: none;" id="fa-bars" class="fa-solid fa-bars"></i>
-                <li title="Notification" class="header__account--item">
-                    <i class="fa-solid fa-bell"></i>
-                </li>
-                <li title="Account" class="header__account--item">
-                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
+        </header>
 
 
-    <!-- Sign In/ Sign Up Modal -->
+        <!-- Sign In/ Sign Up Modal -->
 
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body logIn-modal-body">
-                    <form class="logIn-form" action="">
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="username">Username</label>
-                            <input class="logIn-input" id="logIn-username" type="text">
-                        </div>
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="password">Password</label>
-                            <input class="logIn-input" id="logIn-password" type="password">
-                        </div>
-                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <div class="logIn-btn-container">
-                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="modal-header-logo"
+                            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="InsignUp-btn-container">
-                        Don't have an account?
-                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal">
-                            Sign Up Here
-                        </button>
+                    <div class="modal-body logIn-modal-body">
+                        <form class="logIn-form" action="">
+                            <div class="form-item-container">
+                                <label class="logIn-label" for="username">Username</label>
+                                <input class="logIn-input" id="logIn-username" type="text">
+                            </div>
+                            <div class="form-item-container">
+                                <label class="logIn-label" for="password">Password</label>
+                                <input class="logIn-input" id="logIn-password" type="password">
+                            </div>
+                            <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
+                        </form>
                     </div>
-                </div>
-            </form>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body signUp-modal-body">
-                    <form action="register">
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-username">Username<span style="color: red;">*</span></label>
-                            <input class="signUp-input" id="signUp-username" type="username">
+                    <div class="modal-footer">
+                        <div class="logIn-btn-container">
+                            <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
                         </div>
-                        <div id="username-errorText" class="errorText"></div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-password">Password<span style="color: red;">*</span></label>
-                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
-                            <span onclick="showPassword()" id="showSignUpPassword" class="material-icons-outlined">visibility</span>
+                        <div class="InsignUp-btn-container">
+                            Don't have an account?
+                            <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                                data-bs-toggle="modal">
+                                Sign Up Here
+                            </button>
                         </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span style="color: red;">*</span></label>
-                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
-                            <span onclick="showSignUpPassword()" id="showConfirmPassword" class="material-icons-outlined">visibility</span>
-                        </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
-                            <input class="signUp-input" id="signUp-accountName" type="text">
-                        </div>
-                        <div id="password-errorText" class="errorText"></div>
+                    </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
-                        Sign Up
-                    </a>
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="modal-header-logo"
+                            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body signUp-modal-body">
+                        <form action="register">
+                            <div class="form-item-container">
+                                <label class="signUp-label" for="signUp-username">Username<span
+                                        style="color: red;">*</span></label>
+                                <input class="signUp-input" id="signUp-username" type="username">
+                            </div>
+                            <div id="username-errorText" class="errorText"></div>
+                            <div class="form-item-container">
+                                <label class="signUp-label" for="signUp-password">Password<span
+                                        style="color: red;">*</span></label>
+                                <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
+                                <span onclick="showPassword()" id="showSignUpPassword"
+                                    class="material-icons-outlined">visibility</span>
+                            </div>
+                            <div class="form-item-container">
+                                <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
+                                        style="color: red;">*</span></label>
+                                <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
+                                <span onclick="showSignUpPassword()" id="showConfirmPassword"
+                                    class="material-icons-outlined">visibility</span>
+                            </div>
+                            <div class="form-item-container">
+                                <label class="signUp-label" for="signUp-accountName">Account Name:</label>
+                                <input class="signUp-input" id="signUp-accountName" type="text">
+                            </div>
+                            <div id="password-errorText" class="errorText"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
 
     <!-- End Header -->
 
@@ -187,7 +199,7 @@
                     <img class="content-logo2-sticker" src="./Img/anh2.png" alt="">
                     <div class="content-logo2">
                         <h4 class="content-logo2-title">Best Price Guarantee</h4>
-                        <p class="content-logo2-text">Price match within 48 hours of order confirmation</p>                       
+                        <p class="content-logo2-text">Price match within 48 hours of order confirmation</p>
                     </div>
                 </div>
                 <div class="content-header-logo3">
@@ -206,8 +218,8 @@
                 </div>
 
                 <div class="destinations-pic">
-                    
-  
+
+
                 </div>
             </div>
         </div>
@@ -215,13 +227,16 @@
         <div class="container-dolpo">
             <div class="dolpo-content">
                 <h3 class="dolpo-title">Dolpo Trekking</h3>
-                <div class="dolpo-text">The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal.The total length of the route varies between 160–230 km (100-145 mi), depending on where motor transportation is used and where the trek is ended. This trek crosses two different river valleys and encircles the Annapurna massif. The path reaches its highest [...]</div>
+                <div class="dolpo-text">The Annapurna Circuit is a trek within the Annapurna mountain range of central
+                    Nepal.The total length of the route varies between 160–230 km (100-145 mi), depending on where motor
+                    transportation is used and where the trek is ended. This trek crosses two different river valleys
+                    and encircles the Annapurna massif. The path reaches its highest [...]</div>
                 <div class="dolpo-pricing">
                     <span class="actual-price">$1,300</span>
                     <span class="discounted-price">$1,100</span>
                     <span class="dolpo-person">/ For Person</span>
                 </div>
-                <button class="dolpo-btn">Learn More</button>
+                <button class="dolpo-btn dolpo-learn">Learn More</button>
             </div>
 
             <div class="dolpo-pic">
@@ -241,8 +256,8 @@
                 </div>
                 <div class="destinations-pic-content">
                     <h3 class="destinations-pic-title">Cultural Tours</h3>
-                    <p class="destinations-pic-text">Tourism is travel for pleasure or business; also the theory and practice of touring, the business of attracting,...</p>
-                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                    <p class="destinations-pic-text">Tourism is travel for pleasure or business; also the theory</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>
                 </div>
             </div>
             <div class="activities-pic2">
@@ -251,8 +266,9 @@
                 </div>
                 <div class="destinations-pic-content">
                     <h3 class="destinations-pic-title">Hiking</h3>
-                    <p class="destinations-pic-text">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on...</p>
-                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                    <p class="destinations-pic-text">Hiking is the preferred term, in Canada and the United States, for
+                        a long</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>
                 </div>
             </div>
             <div class="activities-pic3">
@@ -261,8 +277,8 @@
                 </div>
                 <div class="destinations-pic-content">
                     <h3 class="destinations-pic-title">Jungle Safari</h3>
-                    <p class="destinations-pic-text">A is an overland journey, usually a trip by tourists to Africa. In the past, the trip was...</p>
-                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                    <p class="destinations-pic-text">A is an overland journey, usually a trip by tourists to Africa.</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>
                 </div>
             </div>
             <div class="activities-pic4">
@@ -271,8 +287,8 @@
                 </div>
                 <div class="destinations-pic-content">
                     <h3 class="destinations-pic-title">Kayaking</h3>
-                    <p class="destinations-pic-text">Kayaking is the use of a kayak for moving across water. It is distinguished from canoeing by the...</p>
-                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                    <p class="destinations-pic-text">Kayaking is the use of a kayak for moving across water.</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>
                 </div>
             </div>
         </div>
@@ -417,7 +433,9 @@
                     <img class="logo-size" src="./Img/logo-trip.svg" alt="">
                 </div>
                 <div class="logo-star">
-                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i>
                 </div>
                 <div class="trip-excellent">EXCELLENT</div>
                 <div class="trip-based">Based on 3 reviews.</div>
@@ -433,12 +451,14 @@
                     </div>
                     <div class="user-name-time">
                         <div class="user-name">Joke G</div>
-                        <div class="user-time">2019-11-25</div> 
+                        <div class="user-time">2019-11-25</div>
                     </div>
                 </div>
 
                 <div class="user-star">
-                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i> <i class="fa-solid fa-check"></i>
                 </div>
 
                 <div class="user-cmt-title">
@@ -446,8 +466,11 @@
                 </div>
 
                 <div class="user-cmt-text">
-                    Mr. Susan Bomjan created a wonderful tour from Janakpur to Lumbini, Pokhara, Bandipur, Kathmandu, Bhaktapur... I very much enjoyed the walk he guided to Bhaktapur also. He even took my Indian friend to Pashuputinath temple in early morning.
-                    I would recommend Namaste Nepal Travels & tours to anyone who is looking for a reliable, welcoming tour agency in Nepal.
+                    Mr. Susan Bomjan created a wonderful tour from Janakpur to Lumbini, Pokhara, Bandipur, Kathmandu,
+                    Bhaktapur... I very much enjoyed the walk he guided to Bhaktapur also. He even took my Indian friend
+                    to Pashuputinath temple in early morning.
+                    I would recommend Namaste Nepal Travels & tours to anyone who is looking for a reliable, welcoming
+                    tour agency in Nepal.
                 </div>
             </div>
 
@@ -459,12 +482,14 @@
                     </div>
                     <div class="user-name-time">
                         <div class="user-name">reeshajoshi</div>
-                        <div class="user-time">2018-07-26</div> 
+                        <div class="user-time">2018-07-26</div>
                     </div>
                 </div>
 
                 <div class="user-star">
-                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i> <i class="fa-solid fa-check"></i>
                 </div>
 
                 <div class="user-cmt-title">
@@ -472,7 +497,10 @@
                 </div>
 
                 <div class="user-cmt-text">
-                    We went for a 6 day trip to Nepal and It was one of the best trips. Sushan dai was very helpful and he organized our stay in comfortable hotels with pick up and drops. Despite a one day extension in our trip he promptly arranged our stay and travel. The best thing about Namaste Nepal Travels is that it is reasonably priced...I highly recommend Namaste Nepal Travels and Tours to everyone 👍🏼
+                    We went for a 6 day trip to Nepal and It was one of the best trips. Sushan dai was very helpful and
+                    he organized our stay in comfortable hotels with pick up and drops. Despite a one day extension in
+                    our trip he promptly arranged our stay and travel. The best thing about Namaste Nepal Travels is
+                    that it is reasonably priced...I highly recommend Namaste Nepal Travels and Tours to everyone 👍🏼
                 </div>
             </div>
 
@@ -484,12 +512,14 @@
                     </div>
                     <div class="user-name-time">
                         <div class="user-name">Ram J</div>
-                        <div class="user-time">2018-07-21</div> 
+                        <div class="user-time">2018-07-21</div>
                     </div>
                 </div>
 
                 <div class="user-star">
-                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                        class="fa-regular fa-star"></i> <i class="fa-solid fa-check"></i>
                 </div>
 
                 <div class="user-cmt-title">
@@ -497,14 +527,19 @@
                 </div>
 
                 <div class="user-cmt-text">
-                    We went for a trip from Kathmandu to Pokhara, jomsom, Muktinath and manakamna temple. It was a very nice experience. Sushan dai was very helpful throughout the trip. Stay were in good hotels. I would definitely suggest this piackage to my friends and family. One of the best travel experience I have had. Thank you sushan dai.
+                    We went for a trip from Kathmandu to Pokhara, jomsom, Muktinath and manakamna temple. It was a very
+                    nice experience. Sushan dai was very helpful throughout the trip. Stay were in good hotels. I would
+                    definitely suggest this piackage to my friends and family. One of the best travel experience I have
+                    had. Thank you sushan dai.
                 </div>
             </div>
         </div>
-        
+
         <div class="container-reasons">
             <div class="reasons-title">Reasons to travel with us</div>
-            <div class="reasons-content">Let your visitors know why they should trust you. A Call To Action button to tell more about you and your services. You can modify this section from Appearance > Customize > Travel Booking Options > CTA Section.</div>
+            <div class="reasons-content">Let your visitors know why they should trust you. A Call To Action button to
+                tell more about you and your services. You can modify this section from Appearance > Customize > Travel
+                Booking Options > CTA Section.</div>
             <button class="dolpo-btn">Contact Us</button>
         </div>
 
@@ -518,7 +553,11 @@
                 <img src="./Img/lan6-anh1.jpg" alt="" class="pic-img">
                 <div class="blog-text">
                     <a href="" class="blog-title">A Guide to Rocky Mountain vacations</a>
-                    <div class="blog-content">The term mountaineering describes the sport of mountain climbing. While some scholars identify mountaineering-related activities as climbing (rock and ice) and trekking up mountains,others are also adding backpacking, hiking, skiing, via ferrata and wilderness activities,and still others state that mountaineering activities also include indoor climbing Travel dates back to antiquity where wealthy Greeks and Romans […]</div>
+                    <div class="blog-content">The term mountaineering describes the sport of mountain climbing. While
+                        some scholars identify mountaineering-related activities as climbing (rock and ice) and trekking
+                        up mountains,others are also adding backpacking, hiking, skiing, via ferrata and wilderness
+                        activities,and still others state that mountaineering activities also include indoor climbing
+                        Travel dates back to antiquity where wealthy Greeks and Romans […]</div>
                     <div class="blog-inf">
                         <div>
                             <i class="fa-solid fa-user"></i> ahkqi
@@ -534,7 +573,10 @@
                 <img src="./Img/lan6-anh2.jpg" alt="" class="pic-img">
                 <div class="blog-text">
                     <a href="" class="blog-title">City sightseeing Tours of World</a>
-                    <div class="blog-content">Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their summer homes and villas in cities such as Pompeii and Baiae. Many fashion blogs could also be categorized as shopping blogs, similar to the content of fashion magazines. Some retailers in the fashion industry have started blogs to promote […]</div>
+                    <div class="blog-content">Travel dates back to antiquity where wealthy Greeks and Romans would
+                        travel for leisure to their summer homes and villas in cities such as Pompeii and Baiae. Many
+                        fashion blogs could also be categorized as shopping blogs, similar to the content of fashion
+                        magazines. Some retailers in the fashion industry have started blogs to promote […]</div>
                     <div class="blog-inf">
                         <div>
                             <i class="fa-solid fa-user"></i> hieus
@@ -550,7 +592,10 @@
                 <img src="./Img/lan6-anh3.jpg" alt="" class="pic-img">
                 <div class="blog-text">
                     <a href="" class="blog-title">Mountain Climbing in the Himalayas</a>
-                    <div class="blog-content">Camping as a recreational activity became popular among elites in the early 20th century. With time, it grew more democratic, and varied. Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their summer homes and villas in cities such as Pompeii and Baiae. Many fashion blogs could also be […]</div>
+                    <div class="blog-content">Camping as a recreational activity became popular among elites in the
+                        early 20th century. With time, it grew more democratic, and varied. Travel dates back to
+                        antiquity where wealthy Greeks and Romans would travel for leisure to their summer homes and
+                        villas in cities such as Pompeii and Baiae. Many fashion blogs could also be […]</div>
                     <div class="blog-inf">
                         <div>
                             <i class="fa-solid fa-user"></i> nguyen
@@ -644,9 +689,11 @@
         crossorigin="anonymous"></script>
 
     <!-- End Footer -->
-    
+
     <script src="/HeaderFooter.js"></script>
     <script src="./home3.js"></script>
+    <script src="../Login/headerFooter.js"></script>
 
 </body>
+
 </html>

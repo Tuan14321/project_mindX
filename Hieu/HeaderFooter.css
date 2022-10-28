@@ -31,6 +31,7 @@ header {
 
 .header__menu {
     width: 550px;
+    z-index: 99;
 }
 
 .header__menu--list {
@@ -70,13 +71,28 @@ header {
     justify-content: space-between;
 }
 
-.user-btn, .fa-bell {
+
+.fa-bell, .fa-user {
+    background-color: #22a6b3;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: #fff !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-btn {
     color: white;
     background-color: #22a6b3;
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
@@ -109,7 +125,8 @@ header {
     padding-top: 30px;
 }
 
-.logIn-btn, .signUp-btn {
+.logIn-btn,
+.signUp-btn {
     background-color: #22a6b3;
     padding: 8px 100px;
     border-radius: 4px;
@@ -170,14 +187,15 @@ header {
     margin-top: 30px;
 }
 
-.logIn-input, .signUp-input {
+.logIn-input,
+.signUp-input {
     font-size: 15px;
     width: 250px;
     height: 30px;
     border: none;
     padding: 5px;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .logIn-label {
@@ -185,7 +203,7 @@ header {
 }
 
 /* .signUp-label {
-    font-size: 
+    font-size: ;
 } */
 
 .signUp-input {
@@ -212,6 +230,7 @@ header {
     margin-bottom: -20px;
     margin-top: 5px;
 }
+
 /* End Header */
 
 
@@ -314,13 +333,13 @@ footer {
     opacity: 0.6;
 }
 
-.social-navigation > a {
+.social-navigation>a {
     color: #fff;
     margin-right: 20px;
 }
 
 .fa-bars {
-    display: none;
+    
 }
 
 @media screen and (max-width: 1147px) {
@@ -337,7 +356,6 @@ footer {
 
     .header__menu {
         display: none;
-        z-index: 99;
     }
 
     .header__menu--list {
@@ -371,7 +389,7 @@ footer {
     }
 
     .fa-bars {
-        display: block;
+        display: block !important;
         font-size: 30px;
         cursor: pointer;
         margin-right: 20px;
@@ -384,7 +402,7 @@ footer {
 }
 
 @media screen and (max-width: 844px) {
-    .header__logo{
+    .header__logo {
         height: 50px;
     }
 
@@ -411,7 +429,7 @@ footer {
         font-size: 13px;
     }
 
-    .social-navigation > a {
+    .social-navigation>a {
         font-size: 13px;
         margin-right: 10px;
     }
@@ -429,7 +447,8 @@ footer {
     header {
         padding: 0px 10px;
     }
-    .header__logo{
+
+    .header__logo {
         height: 40px;
     }
 
@@ -465,5 +484,5 @@ footer {
     .footer__widget {
         padding-top: 20px;
     }
-    
+
 }
