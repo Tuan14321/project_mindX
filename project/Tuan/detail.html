@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detail.css">
+    <link rel="shortcut icon"
+        href="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Insert-hyperlink-icon.png"
+        type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="detail.css">
+    <title>Detail Trips</title>
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header>
+        <img class="header__logo"
+            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+
+        <nav id="headerMenu" class="header__menu">
+            <ul class="header__menu--list">
+                <li>
+                    <a class="header__menu--items" href="">Home </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Trips Filter </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">ABout Us </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Blog </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="header__account">
+            <ul class="header__account--list">
+                <i id="fa-bars" class="fa-solid fa-bars"></i>
+                <li title="Notification" class="header__account--item">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li title="Account" class="header__account--item">
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body logIn-modal-body">
+                    <form class="logIn-form" action="">
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="username">Username</label>
+                            <input class="logIn-input" id="logIn-username" type="text">
+                        </div>
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="password">Password</label>
+                            <input class="logIn-input" id="logIn-password" type="password">
+                        </div>
+                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="logIn-btn-container">
+                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
+                    </div>
+                    <div class="InsignUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signUp-modal-body">
+                    <form action="register">
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-username">Username<span
+                                    style="color: red;">*</span></label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div id="username-errorText" class="errorText"></div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-password">Password<span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
+                            <span onclick="showPassword()" id="showSignUpPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
+                            <span onclick="showSignUpPassword()" id="showConfirmPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
+                            <input class="signUp-input" id="signUp-accountName" type="text">
+                        </div>
+                        <div id="password-errorText" class="errorText"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Header -->
+
+    <div class="main">
+        <div class="container">
+            <div class="left-container grid-item">
+                <div class="content-item">
+                    <h1 class="trip-name">
+                        Upper Mustang Trek - 16 Days
+                    </h1>
+                    <div class="carousel">
+                        <img src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/jan-niclas-aberle-3094701-2-410x250.jpg"
+                            alt="">
+                    </div>
+                    <div class="description">
+                        <p>The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal.The
+                            total length of the route varies between 160–230 km (100-145 mi), depending on where motor
+                            transportation is used and where the trek is ended. This trek crosses two different river
+                            valleys and encircles the Annapurna massif. The path reaches its highest point at Thorung La
+                            pass (5416m/17769 ft), touching the edge of the Tibetan plateau.
+                        </p>
+                        <p>
+                            Practically all trekkers hike the route anticlockwise, as this way the daily altitude gain
+                            is slower, and crossing the high Thorong La pass is easier and safer. The mountain scenery,
+                            seen at close quarters includes the Annapurna Massif (Annapurna I-IV), Dhaulagiri,
+                            Machhapuchhre, Manaslu, Gangapurna, Tilicho Peak, Pisang Peak, and Paungda Danda. Numerous
+                            other peaks of 6000-8000m in elevation rise from the Annapurna range. The trek begins at
+                            Besisahar or Bhulbhule in the Marshyangdi river valley and concludes in the Kali Gandaki
+                            Gorge. Besisahar can be reached after a seven-hour drive from Kathmandu.
+                        </p>
+
+
+                    </div>
+
+                    <nav class="tripDetail-navBar">
+                        <ul>
+                            <li id="overview">Overview</li>
+                            <li id="itinerary">Itinerary</li>
+                            <li id="cost">Cost</li>
+                            <li id="FAQs">FAQs</li>
+                        </ul>
+                    </nav>
+
+                    <div id="tabContent" class="tab-content">
+                        <div class="overView-content">
+                            <p>Travel is the movement of people between relatively distant geographical locations, and
+                                can
+                                involve travel by foot, bicycle, automobile, train, boat, bus, airplane, or other means,
+                                with or without luggage, and can be one way or round trip. Travel can also include
+                                relatively short stays between successive movements.</p>
+
+                            <p>The origin of the word “travel” is most likely lost to history. The term “travel” may
+                                originate from the Old French word travail, which means 'work'. According to the Merriam
+                                Webster dictionary, the first known use of the word travel was in the 14th century.</p>
+
+                            <p>It also states that the word comes from Middle English travailen, travelen (which means
+                                to
+                                torment, labor, strive, journey) and earlier from Old French travailler (which means to
+                                work
+                                strenuously, toil). In English we still occasionally use the words “travail”, which
+                                means
+                                struggle. According to Simon Winchester in his book The Best Travelers' Tales (2004),
+                                the
+                                words “travel” and “travail” both share an even more ancient root: a Roman instrument of
+                                torture called the tripalium (in Latin it means “three stakes”, as in to impale).</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-container grid-item">
+                <div class="right-item item-1">
+                    <h5 class="saleAmount">
+                        15% off
+                    </h5>
+                    <div class="price-item">
+                        <div class="actual-price">$1,100.00 <span class="per-adult">per Adult</span></div>
+                        <div class="striked-price">From <span>$1,300.00</span></div>
+                    </div>
+                    <!-- <button>Check Availability</button> -->
+
+
+
+                    <!-- Check Avaiability Button -->
+
+
+                    <div class="checkBtn-container">
+                        <button type="button" class="btn btn-primary checkBtn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Check Availability</button>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog check-modal-dialog">
+                            <div class="modal-content check-modal-content">
+                                <div class="modal-header leftSide-container">
+                                    <h1 class="modal-title package-type-title" id="exampleModalLabel">
+                                        <i class="fa-sharp fa-solid fa-suitcase-rolling"></i>Package Type
+                                    </h1>
+                                    <div class="booking-package-container">
+                                        <div class="option-heading">
+                                            <ul>
+                                                <li>TRAVELERS</li>
+                                                <li>QUANTITY</li>
+                                            </ul>
+                                        </div>
+                                        <div class="trips-option">
+                                            <div class="trips-option__traveler">Adult</div>
+                                            <div class="trips-option__select">
+                                                <div class="price-per-person">
+                                                    <span class="actualPrice">$1,700.00 <span class="per-person">/
+                                                            person</span></span>
+                                                    <span class="strikedPrice">$2,000.00</span>
+                                                </div>
+                                                <div class="select-container">
+                                                    <button id="decrease-btn" class="select-btn">-</button>
+                                                    <input id="trip-number" value="0" class="select-number" type="text"
+                                                        readonly>
+                                                    <button id="increase-btn" class="select-btn">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="proceed-checkoutBtn-container">
+                                            <button onclick="location.href='checkout.html'"
+                                                class="proceed-checkoutBtn">Proceed To Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rightSide-container">
+                                    <button type="button" class="btn-close check-modal-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+
+                                    <div class="booking-summary-container">
+                                        <h6 class="booking-summary-title">BOOKING SUMMARY</h6>
+                                        <h4 class="booking-summary-name">Upper Mustang Trek</h4>
+                                        <b><i>Travellers</i></b>
+                                        <div class="calc-price">
+                                            <ul>
+                                                <li><b>1 Adult </b></li>
+                                                <li> ($ <b>1,700.00</b>/person)</li>
+                                            </ul>
+                                            <b>$1,700.00</b>
+                                        </div>
+                                        <div class="total-price">
+                                            Total : $<b>1,700.00</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send message</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="needHelp-container">
+                        <p class="needHelp-ques">Need help with booking?</p>
+                        <a class="sendNudes" href="">Send Us A Message</a>
+                    </div>
+
+                </div>
+
+                <div class="right-item item-2">
+                    <h3 class="leftSide-item__title">Trip Facts</h3>
+                    <div class="underline"></div>
+                    <div class="fact-container">
+                        <div class="fact-item-container">
+                            <i class="fa-solid fa-bus fact-icon"></i>
+                            <div class="fact-text">
+                                Transportation:
+                                <span>1-12 people</span>
+                            </div>
+                        </div>
+                        <div class="fact-item-container">
+                            <i class="fa-solid fa-mountain fact-icon"></i>
+                            <div class="fact-text">
+                                Maximum Altitude:
+                                <span>Moderate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="item-3" class="right-item item-3">
+                    <h3 class="leftSide-item__title">Featured Trips</h3>
+                    <div class="underline"></div>
+
+                </div>
+                <div class="right-item item-4">
+                    <img src="http://rarathemesdemo.com/travel-agency/wp-content/plugins/travel-agency-companion/includes/images/img1.jpg"
+                        alt="" />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__widget">
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title contactInfo">Contact Info</h2>
+                <div class="widgetTitle-line"></div>
+                <nav class="textWidget">
+                    <p>Phone: +977-1-47012454</p>
+                    <p>Email: info@xyz-adventure.com</p>
+                    <p>GPO Box : 5612, Thamel ,Kathmandu</p>
+                    <p>Fax Number: 503-555-1213</p>
+                </nav>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title destination">Destination</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nepal </a></li>
+                    <li><a class="footer__menu--item" href="http://"> India </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Tibet </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Maldives </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title activities">Activities</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Road Cycling </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural Tours </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Peak Climbing </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Jungle Safari </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title tripTypes">Trip Types</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nature Walk </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Child-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Dog-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyRight">
+            Powered by <a href="">C4EJS Gen 130</a> | Theme by <a href="">Team 1 - Group 3</a>
+        </div>
+
+    </footer>
+
+    <div class="footer__contact">
+        <div class="phone-email">
+            <div class="phone">
+                <a class="phoneEmail-link" href=""><i class="fa-solid fa-phone"></i> 02477705666</a>
+            </div>
+            <div class="email">
+                <a class="phoneEmail-link" href=""><i class="fa-regular fa-envelope"></i> contact@mindx.edu.vn</a>
+            </div>
+        </div>
+
+        <div class="social-navigation">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-airbnb"></i></a>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="detail.js"></script>
+</body>
+
+</html>

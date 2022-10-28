@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Insert-hyperlink-icon.png"
+        type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="HeaderFooter.css">
+    <link rel="stylesheet" href="./home3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home Page</title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<body>
+    <!-- Header -->
+
+    <header>
+        <img class="header__logo"
+            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+
+        <nav id="headerMenu" class="header__menu">
+            <ul class="header__menu--list">
+                <li>
+                    <a class="header__menu--items" href="">Home </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Trips Filter </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">ABout Us </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Blog </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="header__account">
+            <ul class="header__account--list">
+                <i style="display: none;" id="fa-bars" class="fa-solid fa-bars"></i>
+                <li title="Notification" class="header__account--item">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li title="Account" class="header__account--item">
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body logIn-modal-body">
+                    <form class="logIn-form" action="">
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="username">Username</label>
+                            <input class="logIn-input" id="logIn-username" type="text">
+                        </div>
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="password">Password</label>
+                            <input class="logIn-input" id="logIn-password" type="password">
+                        </div>
+                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="logIn-btn-container">
+                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
+                    </div>
+                    <div class="InsignUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signUp-modal-body">
+                    <form action="register">
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-username">Username<span style="color: red;">*</span></label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div id="username-errorText" class="errorText"></div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-password">Password<span style="color: red;">*</span></label>
+                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
+                            <span onclick="showPassword()" id="showSignUpPassword" class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span style="color: red;">*</span></label>
+                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
+                            <span onclick="showSignUpPassword()" id="showConfirmPassword" class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
+                            <input class="signUp-input" id="signUp-accountName" type="text">
+                        </div>
+                        <div id="password-errorText" class="errorText"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Header -->
+
+    <div id="main">
+
+        <div id="slider">
+            <div class="slider-text-content">
+                <h2 class="text-heading">Explore the best places around the world</h2>
+                <h5 class="text-description">Start your own Travel and Tour Booking Website for your agency.</h5>
+                <button class="slider-btn">Book a Trip</button>
+            </div>
+        </div>
+
+        <div class="slider-search">
+            <input type="text" placeholder="   Search ..." class="search-input">
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div id="content">
+            <div class="content-header">
+                <div class="content-header-logo1">
+                    <img class="content-logo1-sticker" src="./Img/anh1.png" alt="">
+                    <div class="content-logo1">
+                        <h4 class="content-logo1-title">700 Destinations</h4>
+                        <p class="content-logo1-text">Our expert team handpicked all destinations in this site</p>
+                    </div>
+                </div>
+                <div class="content-header-logo2">
+                    <img class="content-logo2-sticker" src="./Img/anh2.png" alt="">
+                    <div class="content-logo2">
+                        <h4 class="content-logo2-title">Best Price Guarantee</h4>
+                        <p class="content-logo2-text">Price match within 48 hours of order confirmation</p>                       
+                    </div>
+                </div>
+                <div class="content-header-logo3">
+                    <img class="content-logo3-sticker" src="./Img/anh3.png" alt="">
+                    <div class="content-logo3">
+                        <h4 class="content-logo3-title">Top Notch Support</h4>
+                        <p class="content-logo3-text">We are here to help, before, during, and even after your trip</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-destinations">
+                <div class="destinations-title">
+                    <h3 class="destinations-text">Popular Destinations</h3>
+                    <a href="" class="destinations-view">- View All Destinations</a>
+                </div>
+
+                <div class="destinations-pic">
+                    
+  
+                </div>
+            </div>
+        </div>
+
+        <div class="container-dolpo">
+            <div class="dolpo-content">
+                <h3 class="dolpo-title">Dolpo Trekking</h3>
+                <div class="dolpo-text">The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal.The total length of the route varies between 160–230 km (100-145 mi), depending on where motor transportation is used and where the trek is ended. This trek crosses two different river valleys and encircles the Annapurna massif. The path reaches its highest [...]</div>
+                <div class="dolpo-pricing">
+                    <span class="actual-price">$1,300</span>
+                    <span class="discounted-price">$1,100</span>
+                    <span class="dolpo-person">/ For Person</span>
+                </div>
+                <button class="dolpo-btn">Learn More</button>
+            </div>
+
+            <div class="dolpo-pic">
+                <img class="dolpo-pic-1" src="./Img/lan2-anh1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="destinations-title">
+            <h3 class="destinations-text">Activities</h3>
+            <a href="" class="destinations-view">- View All Destinations</a>
+        </div>
+
+        <div class="container-activities">
+            <div class="activities-pic1">
+                <div class="destinations-pic-tour">
+                    <p>6 Tour</p>
+                </div>
+                <div class="destinations-pic-content">
+                    <h3 class="destinations-pic-title">Cultural Tours</h3>
+                    <p class="destinations-pic-text">Tourism is travel for pleasure or business; also the theory and practice of touring, the business of attracting,...</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                </div>
+            </div>
+            <div class="activities-pic2">
+                <div class="destinations-pic-tour">
+                    <p>3 Tour</p>
+                </div>
+                <div class="destinations-pic-content">
+                    <h3 class="destinations-pic-title">Hiking</h3>
+                    <p class="destinations-pic-text">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on...</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                </div>
+            </div>
+            <div class="activities-pic3">
+                <div class="destinations-pic-tour">
+                    <p>6 Tour</p>
+                </div>
+                <div class="destinations-pic-content">
+                    <h3 class="destinations-pic-title">Jungle Safari</h3>
+                    <p class="destinations-pic-text">A is an overland journey, usually a trip by tourists to Africa. In the past, the trip was...</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                </div>
+            </div>
+            <div class="activities-pic4">
+                <div class="destinations-pic-tour">
+                    <p>8 Tour</p>
+                </div>
+                <div class="destinations-pic-content">
+                    <h3 class="destinations-pic-title">Kayaking</h3>
+                    <p class="destinations-pic-text">Kayaking is the use of a kayak for moving across water. It is distinguished from canoeing by the...</p>
+                    <a href="" class="destinations-pic-a">View All Tour</a>                           
+                </div>
+            </div>
+        </div>
+
+        <div class="tour">Featurd Tours</div>
+
+        <div class="container-tours">
+            <!-- <div class="tours-1">
+                <div class="tour-sale">8% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh1.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Greece Tour</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        8 days - 7 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$1,300</span>
+                        <span class="discounted-price price-color">$1,200</span>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-1">
+                <div class="tour-sale">23% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh2.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Best tour of the year</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        16 days - 15 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$1,950</span>
+                        <span class="discounted-price price-color">$1,500</span>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-1">
+                <div class="tour-sale">30% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh3.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Rocky Mountain Vacations</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        13 days - 12 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$2,000</span>
+                        <span class="discounted-price price-color">$1,400</span>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-1">
+                <div class="tour-sale">15% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh4.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Dolpo Trekking</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        17 days - 16 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$1,300</span>
+                        <span class="discounted-price price-color">$1,100</span>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-1">
+                <div class="tour-sale">28% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh5.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Kathmandu Chitwan Tour</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        7 days - 6 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$1,800</span>
+                        <span class="discounted-price price-color">$1,300</span>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-1">
+                <div class="tour-sale">17% Off</div>
+                <div class="tours-pic">
+                    <img class="tours-picture" src="./Img/lan4-anh6.jpg" alt="">
+                </div>
+                <div class="tours-featured">Featured</div>
+                <div class="tours-title">
+                    <a class="tours-title-color" href="">Langtang Trek</a>
+                </div>
+                <div class="tours-time-price">
+                    <div class="tours-time">
+                        <i class="fa-regular fa-clock"></i>
+                        13 days - 12 nights
+                    </div>
+                    <div class="tours-price">
+                        <span class="actual-price">$1,199</span>
+                        <span class="discounted-price price-color">$1,000</span>    
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="view-all">
+            <button class="dolpo-btn">View All Tour</button>
+        </div>
+
+        <div class="container-cmt">
+            <div class="container-trip">
+                <div class="trip-logo">
+                    <img class="logo-size" src="./Img/logo-trip.svg" alt="">
+                </div>
+                <div class="logo-star">
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                </div>
+                <div class="trip-excellent">EXCELLENT</div>
+                <div class="trip-based">Based on 3 reviews.</div>
+            </div>
+
+            <div class="container-user">
+                <div class="user-logo">
+                    <img class="user-icon" src="./Img/icon-1.svg" alt="">
+                </div>
+                <div class="cmt-user">
+                    <div class="user-ava">
+                        <img class="user-ava-size" src="./Img/lan5-anh1.jpg" alt="">
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">Joke G</div>
+                        <div class="user-time">2019-11-25</div> 
+                    </div>
+                </div>
+
+                <div class="user-star">
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="user-cmt-title">
+                    Great to travel in Nepal thanks to Namaste Nepal Travels & tours
+                </div>
+
+                <div class="user-cmt-text">
+                    Mr. Susan Bomjan created a wonderful tour from Janakpur to Lumbini, Pokhara, Bandipur, Kathmandu, Bhaktapur... I very much enjoyed the walk he guided to Bhaktapur also. He even took my Indian friend to Pashuputinath temple in early morning.
+                    I would recommend Namaste Nepal Travels & tours to anyone who is looking for a reliable, welcoming tour agency in Nepal.
+                </div>
+            </div>
+
+            <div class="container-user">
+                <img class="user-icon" src="./Img/icon-1.svg" alt="">
+                <div class="cmt-user">
+                    <div class="user-ava">
+                        <img class="user-ava-size" src="./Img/lan5-anh2.jpg" alt="">
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">reeshajoshi</div>
+                        <div class="user-time">2018-07-26</div> 
+                    </div>
+                </div>
+
+                <div class="user-star">
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="user-cmt-title">
+                    Highly recommend Namaste Nepal Travels and Tours
+                </div>
+
+                <div class="user-cmt-text">
+                    We went for a 6 day trip to Nepal and It was one of the best trips. Sushan dai was very helpful and he organized our stay in comfortable hotels with pick up and drops. Despite a one day extension in our trip he promptly arranged our stay and travel. The best thing about Namaste Nepal Travels is that it is reasonably priced...I highly recommend Namaste Nepal Travels and Tours to everyone 👍🏼
+                </div>
+            </div>
+
+            <div class="container-user">
+                <img class="user-icon" src="./Img/icon-1.svg" alt="">
+                <div class="cmt-user">
+                    <div class="user-ava">
+                        <img class="user-ava-size" src="./Img/lan5-anh3.jpg" alt="">
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">Ram J</div>
+                        <div class="user-time">2018-07-21</div> 
+                    </div>
+                </div>
+
+                <div class="user-star">
+                    <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>  <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="user-cmt-title">
+                    Awesome experience
+                </div>
+
+                <div class="user-cmt-text">
+                    We went for a trip from Kathmandu to Pokhara, jomsom, Muktinath and manakamna temple. It was a very nice experience. Sushan dai was very helpful throughout the trip. Stay were in good hotels. I would definitely suggest this piackage to my friends and family. One of the best travel experience I have had. Thank you sushan dai.
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-reasons">
+            <div class="reasons-title">Reasons to travel with us</div>
+            <div class="reasons-content">Let your visitors know why they should trust you. A Call To Action button to tell more about you and your services. You can modify this section from Appearance > Customize > Travel Booking Options > CTA Section.</div>
+            <button class="dolpo-btn">Contact Us</button>
+        </div>
+
+        <div class="destinations-title">
+            <h3 class="destinations-text">Blog</h3>
+            <a href="" class="destinations-view">- View All Destinations</a>
+        </div>
+
+        <div class="container-blog">
+            <div class="blog-pic">
+                <img src="./Img/lan6-anh1.jpg" alt="" class="pic-img">
+                <div class="blog-text">
+                    <a href="" class="blog-title">A Guide to Rocky Mountain vacations</a>
+                    <div class="blog-content">The term mountaineering describes the sport of mountain climbing. While some scholars identify mountaineering-related activities as climbing (rock and ice) and trekking up mountains,others are also adding backpacking, hiking, skiing, via ferrata and wilderness activities,and still others state that mountaineering activities also include indoor climbing Travel dates back to antiquity where wealthy Greeks and Romans […]</div>
+                    <div class="blog-inf">
+                        <div>
+                            <i class="fa-solid fa-user"></i> ahkqi
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-calendar"></i> 05 Nov 2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-pic">
+                <img src="./Img/lan6-anh2.jpg" alt="" class="pic-img">
+                <div class="blog-text">
+                    <a href="" class="blog-title">City sightseeing Tours of World</a>
+                    <div class="blog-content">Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their summer homes and villas in cities such as Pompeii and Baiae. Many fashion blogs could also be categorized as shopping blogs, similar to the content of fashion magazines. Some retailers in the fashion industry have started blogs to promote […]</div>
+                    <div class="blog-inf">
+                        <div>
+                            <i class="fa-solid fa-user"></i> hieus
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-calendar"></i> 08 Feb 2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-pic">
+                <img src="./Img/lan6-anh3.jpg" alt="" class="pic-img">
+                <div class="blog-text">
+                    <a href="" class="blog-title">Mountain Climbing in the Himalayas</a>
+                    <div class="blog-content">Camping as a recreational activity became popular among elites in the early 20th century. With time, it grew more democratic, and varied. Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their summer homes and villas in cities such as Pompeii and Baiae. Many fashion blogs could also be […]</div>
+                    <div class="blog-inf">
+                        <div>
+                            <i class="fa-solid fa-user"></i> nguyen
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-calendar"></i> 22 Nov 2020
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__widget">
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title contactInfo">Contact Info</h2>
+                <div class="widgetTitle-line"></div>
+                <nav class="textWidget">
+                    <p>Phone: +977-1-47012454</p>
+                    <p>Email: info@xyz-adventure.com</p>
+                    <p>GPO Box : 5612, Thamel ,Kathmandu</p>
+                    <p>Fax Number: 503-555-1213</p>
+                </nav>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title destination">Destination</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nepal </a></li>
+                    <li><a class="footer__menu--item" href="http://"> India </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Tibet </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Maldives </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title activities">Activities</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Road Cycling </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural Tours </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Peak Climbing </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Jungle Safari </a></li>
+                </ul>
+            </div>
+
+            <div class="footer__widget--container">
+                <h2 class="footer__widget--title tripTypes">Trip Types</h2>
+                <div class="widgetTitle-line"></div>
+                <ul class="footer__menu">
+                    <li><a class="footer__menu--item" href="http://"> Nature Walk </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Child-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Dog-friendly </a></li>
+                    <li><a class="footer__menu--item" href="http://"> Cultural </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyRight">
+            Powered by <a href="">C4EJS Gen 130</a> | Theme by <a href="">Team 1 - Group 3</a>
+        </div>
+
+    </footer>
+
+    <div class="footer__contact">
+        <div class="phone-email">
+            <div class="phone">
+                <a class="phoneEmail-link" href=""><i class="fa-solid fa-phone"></i> 02477705666</a>
+            </div>
+            <div class="email">
+                <a class="phoneEmail-link" href=""><i class="fa-regular fa-envelope"></i> contact@mindx.edu.vn</a>
+            </div>
+        </div>
+
+        <div class="social-navigation">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-airbnb"></i></a>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- End Footer -->
+    
+    <script src="/HeaderFooter.js"></script>
+    <script src="./home3.js"></script>
+
+</body>
+</html>

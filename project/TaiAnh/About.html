@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Agency - Travel Agency</title>
+    <link rel="shortcut icon"
+        href="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Insert-hyperlink-icon.png"
+        type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header>
+        <img class="header__logo"
+            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+
+        <nav id="headerMenu" class="header__menu">
+            <ul class="header__menu--list">
+                <li>
+                    <a class="header__menu--items" href="">Home </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Trips Filter </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">ABout Us </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Blog </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="header__account">
+            <ul class="header__account--list">
+                <i id="fa-bars" class="fa-solid fa-bars"></i>
+                <li title="Notification" class="header__account--item">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li title="Account" class="header__account--item">
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body logIn-modal-body">
+                    <form class="logIn-form" action="">
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="username">Username</label>
+                            <input class="logIn-input" id="logIn-username" type="text">
+                        </div>
+                        <div class="form-item-container">
+                            <label class="logIn-label" for="password">Password</label>
+                            <input class="logIn-input" id="logIn-password" type="password">
+                        </div>
+                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="logIn-btn-container">
+                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
+                    </div>
+                    <div class="InsignUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signUp-modal-body">
+                    <form action="register">
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-username">Username<span
+                                    style="color: red;">*</span></label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div id="username-errorText" class="errorText"></div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-password">Password<span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
+                            <span onclick="showPassword()" id="showSignUpPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
+                                    style="color: red;">*</span></label>
+                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
+                            <span onclick="showSignUpPassword()" id="showConfirmPassword"
+                                class="material-icons-outlined">visibility</span>
+                        </div>
+                        <div class="form-item-container">
+                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
+                            <input class="signUp-input" id="signUp-accountName" type="text">
+                        </div>
+                        <div id="password-errorText" class="errorText"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Header -->
+
+    <!-- Your Content Here -->
+
+    <div class="container">
+        <div class="fullwidth-holder">
+            <h1>About Us</h1>
+            <div class="wp-block-cover-container">
+                <img loading="lazy" width="1200" height="430" class="wp-block-cover" alt=""
+                    src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg"
+                    data-object-fit="cover"
+                    srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg 2560w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1024x683.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-768x512.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1536x1024.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-2048x1365.jpg 2048w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-90x60.jpg 90w"
+                    sizes="(max-width: 2560px) 100vw, 2560px" style="filter:brightness(50%);" />
+                <div class="wp-block-cover__inner-container">
+                    <span>Create your Travel Booking Website with Travel
+                        Agency Theme</span>
+                </div>
+            </div>
+            <p>Travel Agency is a free WordPress theme that you can use to create stunning and functional travel and
+                tour booking website. It is lightweight, responsive, and SEO friendly. It is compatible with WP Travel
+                Engine, a WordPress plugin for travel booking.</p>
+            <p>It is also translation ready. So you can translate <a href="#">your website</a> into any language.</p>
+            <div style class="ti-widget ti-trip" data-layout-id="5" data-set-id="light-clean"
+                data-pid="b5167179c03e50ec942cb" data-pager-autoplay-timeout="6">
+                <div class="ti-widget-container ti-col-4">
+                    <div class="ti-footer">
+                        <div class="ti-large-logo">
+                            <div class="ti-v-center"> <img class="ti-logo-fb"
+                                    src="https://cdn.trustindex.io/assets/platform/Tripadvisor/logo.svg" width="150"
+                                    height="25" alt="Tripadvisor"> </div>
+                        </div>
+                        <div class="ti-stars star-lg">
+                            <span class="ti-star f"></span>
+                            <span class="ti-star f"></span>
+                            <span class="ti-star f"></span>
+                            <span class="ti-star f"></span>
+                            <span class="ti-star f"></span>
+                        </div>
+                        <div class="ti-rating-text">
+                            <strong class="ti-rating"> EXCELLENT </strong>
+                            <span class="nowrap">
+                                Based on
+                                <strong>6 reviews</strong>
+                                .
+                            </span>
+                        </div>
+                    </div>
+                    <div class="ti-reviews-container">
+                        <div class="ti-controls">
+                            <div class="ti-next" style="display: block;"></div>
+                            <div class="ti-prev" style="display: block;"></div>
+                        </div>
+                        <div class="ti-reviews-container-wrapper">
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img">
+                                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e3/1f/default-avatar-2020-46.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="Joke G">
+                                        </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">Joke G</div>
+                                            <div class="ti-date">2019-11-25</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars">
+                                        <span class="ti-star f"></span>
+                                        <span class="ti-star f"></span>
+                                        <span class="ti-star f"></span>
+                                        <span class="ti-star f"></span>
+                                        <span class="ti-star f"></span>
+                                        <span class="ti-verified-review">
+                                            <span class="ti-verified-tooltip">Verified</span>
+                                        </span>
+                                    </div>
+                                    <div class="ti-review-content">
+                                        <strong>Awesome experience</strong><br>We went for a trip from
+                                        Kathmandu to Pokhara, jomsom, Muktinath and manakamna temple. It was a very nice
+                                        experience. Sushan dai was very helpful throughout the trip. Stay were in good
+                                        hotels. I would definitely suggest this piackage to my friends and family. One
+                                        of the best travel experience I have had. Thank you sushan dai.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img"> <img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e4/a9/default-avatar-2020-50.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="reeshajoshi"> </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">reeshajoshi</div>
+                                            <div class="ti-date">2018-07-26</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars"><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-verified-review"><span
+                                                class="ti-verified-tooltip">Verified</span></span></div>
+                                    <div class="ti-review-content">
+                                        <!-- R-CONTENT --><strong>Highly recommend Namaste Nepal Travels and
+                                            Tours</strong><br>We went for a 6 day trip to Nepal and It was one of the
+                                        best trips. Sushan dai was very helpful and he organized our stay in comfortable
+                                        hotels with pick up and drops. Despite a one day extension in our trip he
+                                        promptly arranged our stay and travel. The best thing about Namaste Nepal
+                                        Travels is that it is reasonably priced...I highly recommend Namaste Nepal
+                                        Travels and Tours to everyone <img draggable="false" role="img" class="emoji"
+                                            alt="👍🏼"
+                                            src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44d-1f3fc.svg">
+                                        <!-- R-CONTENT -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img"> <img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f2/eb/default-avatar-2020-27.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="Ram J"> </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">Ram J</div>
+                                            <div class="ti-date">2018-07-21</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars"><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-verified-review"><span
+                                                class="ti-verified-tooltip">Verified</span></span></div>
+                                    <div class="ti-review-content">
+                                        <!-- R-CONTENT --><strong>Awesome experience</strong><br>We went for a trip from
+                                        Kathmandu to Pokhara, jomsom, Muktinath and manakamna temple. It was a very nice
+                                        experience. Sushan dai was very helpful throughout the trip. Stay were in good
+                                        hotels. I would definitely suggest this piackage to my friends and family. One
+                                        of the best travel experience I have had. Thank you sushan dai.
+                                        <!-- R-CONTENT -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img"> <img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/eb/e3/default-avatar-2020-59.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="Mahesh T"> </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">Mahesh T</div>
+                                            <div class="ti-date">2018-01-08</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars"><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-verified-review"><span
+                                                class="ti-verified-tooltip">Verified</span></span></div>
+                                    <div class="ti-review-content">
+                                        <!-- R-CONTENT --><strong>Excellent service</strong><br>I have been with Susan
+                                        Bomjan since 2014 , excellent service in ticketing and tours . I have introduced
+                                        my family and friends , everyone are satisfied with his service .
+                                        <!-- R-CONTENT -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img"> <img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e5/2b/default-avatar-2020-52.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="Chs W"> </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">Chs W</div>
+                                            <div class="ti-date">2016-12-08</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars"><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-verified-review"><span
+                                                class="ti-verified-tooltip">Verified</span></span></div>
+                                    <div class="ti-review-content">
+                                        <!-- R-CONTENT --><strong>Best Travel Agency</strong><br>Namaste Nepal Travels
+                                        and Tours is best Travel Agency for Tour Packages. I am very satisfied with
+                                        Pokhara 2 Night and 3 Days Package. Its cheap and affordable for the students
+                                        like and other groups.
+                                        <!-- R-CONTENT -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ti-review-item" style="position: relative;">
+                                <div class="ti-inner">
+                                    <div class="ti-review-header">
+                                        <div class="ti-profile-img"> <img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/97/ab/25/serbwaiba.jpg?w=100&amp;h=100&amp;s=1"
+                                                alt="serbwaiba"> </div>
+                                        <div class="ti-profile-details">
+                                            <div class="ti-name">serbwaiba</div>
+                                            <div class="ti-date">2016-11-11</div>
+                                        </div>
+                                    </div>
+                                    <div class="ti-stars"><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-star f"></span><span class="ti-star f"></span><span
+                                            class="ti-verified-review"><span
+                                                class="ti-verified-tooltip">Verified</span></span></div>
+                                    <div class="ti-review-content">
+                                        <!-- R-CONTENT --><strong>Best Tour Package</strong><br>Thank you very much for
+                                        your best services and i'll visit with you in coming days. Thanks for your kind
+                                        co-operation.
+                                        <!-- R-CONTENT -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ti-controls-dots">
+                            <div class="dot" data-pager-state="0"></div>
+                            <div class="dot" data-pager-state="1"></div>
+                            <div class="dot active" data-pager-state="2"></div>
+                            <div class="dot" data-pager-state="3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Our Team</h2>
+            <figure class="wp-container-2 wp-block-gallery-1 wp-block-gallery columns-4 is-cropped">
+                <ul class="blocks-gallery-grid">
+                    <li class="blocks-gallery-item">
+                        <figure><img loading="lazy" width="297" height="369.44"
+                                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mehrad-vosoughi-iUQmEFtfdLw-unsplash201.jpg"
+                                alt="" data-id="1601"
+                                data-full-url="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mehrad-vosoughi-iUQmEFtfdLw-unsplash201.jpg"
+                                data-link="https://thebootstrapthemes.com/previews/travel-agency-booking/mehrad-vosoughi-iuqmeftfdlw-unsplash1/"
+                                class="wp-image-1601"
+                                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mehrad-vosoughi-iUQmEFtfdLw-unsplash201.jpg 410w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mehrad-vosoughi-iUQmEFtfdLw-unsplash201-241x300.jpg 241w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mehrad-vosoughi-iUQmEFtfdLw-unsplash201-48x60.jpg 48w"
+                                sizes="(max-width: 410px) 100vw, 410px">
+                            <figcaption class="blocks-gallery-item__caption">Joseph N</figcaption>
+                        </figure>
+                    </li>
+                    <li class="blocks-gallery-item">
+                        <figure><img loading="lazy" width="297" height="369.44"
+                                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/bantersnaps-v6771a4avV4-unsplash201.jpg"
+                                alt="" data-id="1600"
+                                data-full-url="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/bantersnaps-v6771a4avV4-unsplash201.jpg"
+                                data-link="https://thebootstrapthemes.com/previews/travel-agency-booking/bantersnaps-v6771a4avv4-unsplash1/"
+                                class="wp-image-1600"
+                                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/bantersnaps-v6771a4avV4-unsplash201.jpg 410w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/bantersnaps-v6771a4avV4-unsplash201-241x300.jpg 241w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/bantersnaps-v6771a4avV4-unsplash201-48x60.jpg 48w"
+                                sizes="(max-width: 410px) 100vw, 410px">
+                            <figcaption class="blocks-gallery-item__caption">Calryon Ton</figcaption>
+                        </figure>
+                    </li>
+                    <li class="blocks-gallery-item">
+                        <figure><img loading="lazy" width="297" height="369.44"
+                                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/maaz-ijaz-xKn9Udjublw-unsplash201.jpg"
+                                alt="" data-id="1599"
+                                data-full-url="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/maaz-ijaz-xKn9Udjublw-unsplash201.jpg"
+                                data-link="https://thebootstrapthemes.com/previews/travel-agency-booking/maaz-ijaz-xkn9udjublw-unsplash1/"
+                                class="wp-image-1599"
+                                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/maaz-ijaz-xKn9Udjublw-unsplash201.jpg 410w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/maaz-ijaz-xKn9Udjublw-unsplash201-241x300.jpg 241w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/maaz-ijaz-xKn9Udjublw-unsplash201-48x60.jpg 48w"
+                                sizes="(max-width: 410px) 100vw, 410px">
+                            <figcaption class="blocks-gallery-item__caption">Musta Moz</figcaption>
+                        </figure>
+                    </li>
+                    <li class="blocks-gallery-item">
+                        <figure><img loading="lazy" width="297" height="369.44"
+                                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg"
+                                alt="" data-id="1596"
+                                data-full-url="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg"
+                                data-link="https://thebootstrapthemes.com/previews/travel-agency-booking/munib-saad-vr6rvuv3fww-unsplash1/"
+                                class="wp-image-1596"
+                                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg 410w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201-241x300.jpg 241w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201-48x60.jpg 48w"
+                                sizes="(max-width: 410px) 100vw, 410px">
+                            <figcaption class="blocks-gallery-item__caption">Home John</figcaption>
+                        </figure>
+                    </li>
+            </figure>
+            <hr
+                class="wp-block-separator has-text-color has-background has-light-green-cyan-background-color has-light-green-cyan-color">
+            <h2>Our Services</h2>
+            <div class="wp-container-7 wp-block-group alignwide">
+                <div class="wp-block-group__inner-container">
+                    <div class="wp-container-6 wp-block-columns alignwide">
+                        <div class="wp-container-3 wp-block-column is-vertically-aligned-top">
+                            <figure class="wp-block-image size-medium"><img loading="lazy" width="300" height="200"
+                                    src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-300x200.jpg"
+                                    alt="" class="wp-image-179"
+                                    srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-1024x683.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-768x512.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-1536x1024.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1-90x60.jpg 90w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/canal-1209808_1920-1.jpg 1920w"
+                                    sizes="(max-width: 300px) 100vw, 300px"></figure>
+                            <h4>Accomodation</h4>
+                            <p>Which treats of the character and pursuits of the famous Don Quixote of La Mancha.</p>
+                        </div>
+                        <div class="wp-container-4 wp-block-column">
+                            <figure class="wp-block-image size-medium is-resized"><img
+                                    src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-300x198.jpg"
+                                    alt="" class="wp-image-182" height="200"
+                                    srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-300x198.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-1024x677.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-768x508.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-1536x1016.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1-91x60.jpg 91w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/eiffel-tower-1526364_19201-1.jpg 1920w"
+                                    sizes="(max-width: 300px) 100vw, 300px"></figure>
+
+
+
+                            <h4>City Tour</h4>
+
+
+
+                            <p>Which treats of the first sally the ingenious Don Quixote made from home.</p>
+                        </div>
+                        <div class="wp-container-5 wp-block-column">
+                            <figure class="wp-block-image size-medium"><img loading="lazy" width="300" height="200"
+                                    src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-300x200.jpg"
+                                    alt="" class="wp-image-489"
+                                    srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-1024x683.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-768x512.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-1536x1024.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-2048x1365.jpg 2048w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/StockSnap_Y2AHVPYB511-1-90x60.jpg 90w"
+                                    sizes="(max-width: 300px) 100vw, 300px"></figure>
+
+
+
+                            <h4>Wine and Dine</h4>
+
+
+
+                            <p>Wherein is related the droll way in which Don Quixote had himself dubbed a knight.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="has-cyan-bluish-gray-color has-text-color has-large-font-size">Travel is the movement of people
+                between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat,
+                bus, airplane, ship or other means, with or without luggage, and can be one way or round trip. Travel
+                can also include relatively short stays between successive movements, as in the case of tourism.</h2>
+            <hr class="wp-block-separator">
+            <div class="wp-container-11 wp-block-columns">
+                <div class="wp-container-8 wp-block-column">
+                    <figure class="wp-block-image size-large"><img loading="lazy" width="360" height="450"
+                            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2018/05/cropped-paragliding-1220001_19201-1-2.jpg"
+                            alt="" class="wp-image-565"
+                            srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2018/05/cropped-paragliding-1220001_19201-1-2.jpg 360w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2018/05/cropped-paragliding-1220001_19201-1-2-240x300.jpg 240w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2018/05/cropped-paragliding-1220001_19201-1-2-48x60.jpg 48w"
+                            sizes="(max-width: 360px) 100vw, 360px"></figure>
+                </div>
+                <div class="wp-container-9 wp-block-column">
+                    <h2>Our Destination</h2>
+                    <p>Travel is the movement of people between distant geographical locations. Travel can be done by
+                        foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without
+                        luggage, and can be one way or round trip. Travel can also include relatively short stays
+                        between successive movements, as in the case of tourism.</p>
+                </div>
+                <div class="wp-container-10 wp-block-column">
+                    <p>Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their
+                        summer homes and villas in cities such as Pompeii and Baiae. While early travel tended to be
+                        slower, more dangerous, and more dominated by trade and migration, cultural and technological
+                        advances over many years have tended to mean that travel has become easier and more accessible.
+                        Mankind has come a long way in transportation since Christopher Columbus sailed to the new world
+                        from Spain in 1492, an expedition which took over 10 weeks to arrive at the final destination;
+                        to the 21st century where aircraft allow travel from Spain to the United States overnight.</p>
+                </div>
+            </div>
+            <div class="wp-container-13 wp-block-group">
+                <div class="wp-block-group__inner-container">
+                    <div class="wp-block-image is-style-rounded">
+                        <figure class="aligncenter size-large is-resized">
+                            <img loading="lazy" src="https://s.w.org/images/core/5.5/don-quixote-03.jpg"
+                                alt="Pencil drawing of Don Quixote" style="
+                                    border-radius:50%;
+                                    -moz-border-radius:50%;
+                                    -webkit-border-radius:50%;
+                                    " width="164" height="164">
+                        </figure>
+                    </div>
+                    <blockquote class="wp-block-quote has-text-align-center is-style-large">
+                        <p>“Do you see over yonder, friend Sancho, thirty or forty hulking giants? I intend to do battle
+                            with them and slay them.”</p><cite>— Don Quixote</cite>
+                    </blockquote>
+                    <hr class="wp-block-separator is-style-dots">
+                </div>
+            </div>
+            <div class="wp-block-image">
+                <figure class="alignleft size-large is-resized"><img loading="lazy"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-1024x682.jpg"
+                        alt="" class="wp-image-525" width="512" height="341"
+                        srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-1024x682.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-768x511.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-1536x1022.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-2048x1363.jpg 2048w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/paul-bence-3958881-1-90x60.jpg 90w"
+                        sizes="(max-width: 512px) 100vw, 512px"></figure>
+            </div>
+            <p>Travel dates back to antiquity where wealthy Greeks and Romans would travel for leisure to their summer
+                homes and villas in cities such as Pompeii and Baiae. While early travel tended to be slower, more
+                dangerous, and more dominated by trade and migration, cultural and technological advances over many
+                years have tended to mean that travel has become easier and more accessible. Mankind has come a long way
+                in transportation since Christopher Columbus sailed to the new world from Spain in 1492, an expedition
+                which took over 10 weeks to arrive at the final destination; to the 21st century where aircraft allow
+                travel from Spain to the United States overnight.</p>
+            <blockquote class="wp-block-quote">
+                <p>Travel in the Middle Ages offered hardships and challenges, however, it was important to the economy
+                    and to society. The wholesale sector depended (for example) on merchants dealing with/through
+                    caravans or sea-voyagers, end-user retailing often demanded the services of many itinerant peddlers
+                    wandering from village to hamlet, gyrovagues (Wandering Monks) and wandering friars brought theology
+                    and pastoral support to neglected areas, traveling minstrels practiced the never-ending tour, and
+                    armies ranged far and wide in various crusades and in sundry other wars. Pilgrimages were common in
+                    both the European and Islamic worlds and involved streams of travelers both locally (Canterbury
+                    Tales-style) and internationally.</p><cite>Story Teller</cite>
+            </blockquote>
+            <p>In the late 16th century it became fashionable for young European aristocrats and wealthy upper-class men
+                to travel to significant European cities as part of their education in the arts and literature. This was
+                known as the Grand Tour, it included cities such as London, Paris, Venice, Florence, and Rome. However,
+                The French revolution brought with it the end of the Grand Tour.</p>
+            <p>Travel by water often provided more comfort and speed than land-travel, at least until the advent of a
+                network of railways in the 19th century. Travel for the purpose of tourism is reported to have started
+                around this time when people began to travel for fun as travel was no longer a hard and challenging
+                task. This was capitalized on by people like Thomas Cook selling tourism packages where trains and
+                hotels were booked together. Airships and airplanes took over much of the role of long-distance surface
+                travel in the 20th century, notably after the Second World War where there was a surplus of both
+                aircraft and pilots. Indeed, air travel has become so ubiquitous in the 21st century that one woman,
+                Alexis Alford, visited all 196 countries before the age of 21.</p>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer__widget">
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title contactInfo">Contact Info</h2>
+                    <div class="widgetTitle-line"></div>
+                    <nav class="textWidget">
+                        <p>Phone: +977-1-47012454</p>
+                        <p>Email: info@xyz-adventure.com</p>
+                        <p>GPO Box : 5612, Thamel ,Kathmandu</p>
+                        <p>Fax Number: 503-555-1213</p>
+                    </nav>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title destination">Destination</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Nepal </a></li>
+                        <li><a class="footer__menu--item" href="http://"> India </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Tibet </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Maldives </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title activities">Activities</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Road Cycling </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Cultural Tours </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Peak Climbing </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Jungle Safari </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title tripTypes">Trip Types</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Nature Walk </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Child-friendly </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Dog-friendly </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Cultural </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyRight">
+                Powered by <a href="">C4EJS Gen 130</a> | Theme by <a href="">Team 1 - Group 3</a>
+            </div>
+
+        </footer>
+
+        <div class="footer__contact">
+            <div class="phone-email">
+                <div class="phone">
+                    <a class="phoneEmail-link" href=""><i class="fa-solid fa-phone"></i> 02477705666</a>
+                </div>
+                <div class="email">
+                    <a class="phoneEmail-link" href=""><i class="fa-regular fa-envelope"></i> contact@mindx.edu.vn</a>
+                </div>
+            </div>
+
+            <div class="social-navigation">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href=""><i class="fa-brands fa-airbnb"></i></a>
+            </div>
+        </div>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+
+        <!-- End Footer -->
+        <script src="/HeaderFooter.js"></script>
+</body>
+
+</html>
