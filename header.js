@@ -1,9 +1,9 @@
-let role = localStorage.getItem("role");
-let status = localStorage.getItem("status");
-if (status == null) {
-    window.location.assign("http://127.0.0.1:5500/index.html");
-    alert("Must be login");
-} 
+// let role = localStorage.getItem("role");
+// let status = localStorage.getItem("status");
+// if (status == null) {
+//     window.location.assign("http://127.0.0.1:5500/index.html");
+//     alert("Must be login");
+// } 
 
 
 function showHeader() {
