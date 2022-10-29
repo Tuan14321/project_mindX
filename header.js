@@ -66,7 +66,7 @@ function showHeader() {
 }
 function logOut() {
     localStorage.clear();
-    window.location.assign("https://tuan14321.github.io/project_mindX/index.html")
+    window.location.assign("index.html")
 }
 showHeader();
 

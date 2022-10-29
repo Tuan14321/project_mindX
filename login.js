@@ -111,9 +111,9 @@ function login() {
             if (ischeck == true) {
                 let role = localStorage.getItem("role");
                 if(role == "user"){
-                    window.location.assign("https://tuan14321.github.io/project_mindX/home.html")
+                    window.location.assign("home.html")
                 } else if(role == "admin"){
-                    window.location.assign("https://tuan14321.github.io/project_mindX/admin.html")
+                    window.location.assign("admin.html")
                 }
                 $headerLogin.innerHTML = stringHeader;
                 localStorage.setItem("status", true);
@@ -150,7 +150,7 @@ function register(){
             })
             .then(function (data) {
                 alert("Add successfully")
-                window.location.assign("https://tuan14321.github.io/project_mindX//admin.html");
+                window.location.assign("index.html");
             });
 
 }

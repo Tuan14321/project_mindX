@@ -57,7 +57,7 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
     );
 
     function requestToDetail(id){
-        window.location.assign("https://tuan14321.github.io/project_mindX/detail.html?id=" + id)
+        window.location.assign("detail.html?id=" + id)
     }
 
     
