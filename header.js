@@ -1,7 +1,7 @@
 // let role = localStorage.getItem("role");
 // let status = localStorage.getItem("status");
 // if (status == null) {
-//     window.location.assign("http://127.0.0.1:5500/index.html");
+//     window.location.assign("https://tuan14321.github.io/project_mindX/index.html");
 //     alert("Must be login");
 // } 
 
@@ -50,7 +50,9 @@ function showHeader() {
                         <li title="${data[i].name}" class="header__account--item">
                             <a class="btn btn-primary user-btn"
                                 role="button">
-                                <img onclick="logOut()" class="avt-login" src="${data[i].avt}">
+                                <img style=" height: 40px;
+                                width: 40px;
+                                border-radius: 50%;" onclick="logOut()" class="avt-login" src="${data[i].avt}">
                             </a>
                         </li>
                     </ul>
@@ -64,7 +66,7 @@ function showHeader() {
 }
 function logOut() {
     localStorage.clear();
-    window.location.assign("http://127.0.0.1:5500/index.html")
+    window.location.assign("https://tuan14321.github.io/project_mindX/index.html")
 }
 showHeader();
 

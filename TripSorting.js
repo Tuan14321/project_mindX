@@ -28,7 +28,7 @@ let $activSelect = document.getElementById('activ-select');
 let $typeSelect = document.getElementById('type-select');
 
 function requestDetail(id){
-    window.location.assign("http://127.0.0.1:5500/detail.html?id=" + id)
+    window.location.assign("https://tuan14321.github.io/project_mindX/?id=" + id)
 }
 fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
     .then((response) => response.json())

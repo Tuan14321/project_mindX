@@ -111,9 +111,9 @@ function login() {
             if (ischeck == true) {
                 let role = localStorage.getItem("role");
                 if(role == "user"){
-                    window.location.assign("http://127.0.0.1:5500/home.html")
+                    window.location.assign("https://tuan14321.github.io/project_mindX//home.html")
                 } else if(role == "admin"){
-                    window.location.assign("http://127.0.0.1:5500/admin.html")
+                    window.location.assign("https://tuan14321.github.io/project_mindX//admin.html")
                 }
                 $headerLogin.innerHTML = stringHeader;
                 localStorage.setItem("status", true);
@@ -150,7 +150,7 @@ function register(){
             })
             .then(function (data) {
                 alert("Add successfully")
-                window.location.assign("http://127.0.0.1:5500/login.html");
+                window.location.assign("https://tuan14321.github.io/project_mindX//admin.html");
             });
 
 }

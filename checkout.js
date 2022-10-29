@@ -59,7 +59,7 @@ function Booking() {
                     return res.json();
                 })
                 .then(function (data) {
-                    window.location.assign("http://127.0.0.1:5500/thankyou.html?id="+ id);
+                    window.location.assign("https://tuan14321.github.io/project_mindX/thankyou.html?id="+ id);
                 });
         });
 
