@@ -111,9 +111,9 @@ function login() {
             if (ischeck == true) {
                 let role = localStorage.getItem("role");
                 if(role == "user"){
-                    window.location.assign("https://tuan14321.github.io/project_mindX//home.html")
+                    window.location.assign("https://tuan14321.github.io/project_mindX/home.html")
                 } else if(role == "admin"){
-                    window.location.assign("https://tuan14321.github.io/project_mindX//admin.html")
+                    window.location.assign("https://tuan14321.github.io/project_mindX/admin.html")
                 }
                 $headerLogin.innerHTML = stringHeader;
                 localStorage.setItem("status", true);

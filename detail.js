@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 function requestCheckout() {
-    window.location.assign('http://127.0.0.1:5500/checkout.html?id=' + id);
+    window.location.assign('https://github.com/Tuan14321/project_mindX/checkout.html?id=' + id);
 }
 
 fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
