@@ -225,7 +225,7 @@ function loadCustomerData() {
                     <td>${data[i].username}</td>
                     <td>${data[i].password}</td>
                     <td>${data[i].displayName}</td>
-            <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#accountModal" onclick="viewDetail(${data[i].id})">Detail</button></td>
+            <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#accountModal" onclick="viewDetail(${data[i].order_id})">Detail</button></td>
                 </tr>
         `
                 }
