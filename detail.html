@@ -26,168 +26,16 @@
 
 <body>
     <!-- Header -->
-
-    <header>
-        <img class="header__logo"
-            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-
-        <nav id="headerMenu" class="header__menu">
-            <ul class="header__menu--list">
-                <li>
-                    <a class="header__menu--items" href="">Home </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Trips Filter </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">ABout Us </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Blog </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Contact </a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav class="header__account">
-            <ul class="header__account--list">
-                <i id="fa-bars" class="fa-solid fa-bars"></i>
-                <li title="Notification" class="header__account--item">
-                    <i class="fa-solid fa-bell"></i>
-                </li>
-                <li title="Account" class="header__account--item">
-                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-    <!-- Sign In/ Sign Up Modal -->
-
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body logIn-modal-body">
-                    <form class="logIn-form" action="">
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="username">Username</label>
-                            <input class="logIn-input" id="logIn-username" type="text">
-                        </div>
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="password">Password</label>
-                            <input class="logIn-input" id="logIn-password" type="password">
-                        </div>
-                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <div class="logIn-btn-container">
-                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
-                    </div>
-                    <div class="InsignUp-btn-container">
-                        Don't have an account?
-                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal">
-                            Sign Up Here
-                        </button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
+    <div id="headerLogin">
+        
     </div>
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body signUp-modal-body">
-                    <form action="register">
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-username">Username<span
-                                    style="color: red;">*</span></label>
-                            <input class="signUp-input" id="signUp-username" type="username">
-                        </div>
-                        <div id="username-errorText" class="errorText"></div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-password">Password<span
-                                    style="color: red;">*</span></label>
-                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
-                            <span onclick="showPassword()" id="showSignUpPassword"
-                                class="material-icons-outlined">visibility</span>
-                        </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
-                                    style="color: red;">*</span></label>
-                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
-                            <span onclick="showSignUpPassword()" id="showConfirmPassword"
-                                class="material-icons-outlined">visibility</span>
-                        </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
-                            <input class="signUp-input" id="signUp-accountName" type="text">
-                        </div>
-                        <div id="password-errorText" class="errorText"></div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
-                        Sign Up
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- End Header -->
 
     <div class="main">
         <div class="container">
             <div class="left-container grid-item">
                 <div class="content-item">
-                    <h1 class="trip-name">
-                        Upper Mustang Trek - 16 Days
-                    </h1>
-                    <div class="carousel">
-                        <img src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/jan-niclas-aberle-3094701-2-410x250.jpg"
-                            alt="">
-                    </div>
-                    <div class="description">
-                        <p>The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal.The
-                            total length of the route varies between 160–230 km (100-145 mi), depending on where motor
-                            transportation is used and where the trek is ended. This trek crosses two different river
-                            valleys and encircles the Annapurna massif. The path reaches its highest point at Thorung La
-                            pass (5416m/17769 ft), touching the edge of the Tibetan plateau.
-                        </p>
-                        <p>
-                            Practically all trekkers hike the route anticlockwise, as this way the daily altitude gain
-                            is slower, and crossing the high Thorong La pass is easier and safer. The mountain scenery,
-                            seen at close quarters includes the Annapurna Massif (Annapurna I-IV), Dhaulagiri,
-                            Machhapuchhre, Manaslu, Gangapurna, Tilicho Peak, Pisang Peak, and Paungda Danda. Numerous
-                            other peaks of 6000-8000m in elevation rise from the Annapurna range. The trek begins at
-                            Besisahar or Bhulbhule in the Marshyangdi river valley and concludes in the Kali Gandaki
-                            Gorge. Besisahar can be reached after a seven-hour drive from Kathmandu.
-                        </p>
-
+                    <div id="tourById">
 
                     </div>
 
@@ -230,12 +78,14 @@
             </div>
             <div class="right-container grid-item">
                 <div class="right-item item-1">
-                    <h5 class="saleAmount">
-                        15% off
-                    </h5>
-                    <div class="price-item">
-                        <div class="actual-price">$1,100.00 <span class="per-adult">per Adult</span></div>
-                        <div class="striked-price">From <span>$1,300.00</span></div>
+                    <div id="tour-price">
+                        <h5 class="saleAmount">
+                            15% off
+                        </h5>
+                        <div class="price-item">
+                            <div class="actual-price">$1,100.00 <span class="per-adult">per Adult</span></div>
+                            <div class="striked-price">From <span>$1,300.00</span></div>
+                        </div>
                     </div>
                     <!-- <button>Check Availability</button> -->
 
@@ -247,6 +97,7 @@
                     <div class="checkBtn-container">
                         <button type="button" class="btn btn-primary checkBtn" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" data-bs-whatever="@mdo">Check Availability</button>
+                            <!-- <button type="button" onclick="requestCheckout()" class="btn btn-primary checkBtn">Check Availability</button> -->
                     </div>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -267,10 +118,10 @@
                                         <div class="trips-option">
                                             <div class="trips-option__traveler">Adult</div>
                                             <div class="trips-option__select">
-                                                <div class="price-per-person">
-                                                    <span class="actualPrice">$1,700.00 <span class="per-person">/
+                                                <div id="price-per-person" class="price-per-person">
+                                                    <!-- <span class="actualPrice">$1,700.00 <span class="per-person">/
                                                             person</span></span>
-                                                    <span class="strikedPrice">$2,000.00</span>
+                                                    <span class="strikedPrice">$2,000.00</span> -->
                                                 </div>
                                                 <div class="select-container">
                                                     <button id="decrease-btn" class="select-btn">-</button>
@@ -293,17 +144,19 @@
 
                                     <div class="booking-summary-container">
                                         <h6 class="booking-summary-title">BOOKING SUMMARY</h6>
-                                        <h4 class="booking-summary-name">Upper Mustang Trek</h4>
-                                        <b><i>Travellers</i></b>
-                                        <div class="calc-price">
-                                            <ul>
-                                                <li><b>1 Adult </b></li>
-                                                <li> ($ <b>1,700.00</b>/person)</li>
-                                            </ul>
-                                            <b>$1,700.00</b>
-                                        </div>
-                                        <div class="total-price">
-                                            Total : $<b>1,700.00</b>
+                                        <div id="booking-sumary">
+                                            <!-- <h4 class="booking-summary-name">Upper Mustang Trek</h4>
+                                            <b><i>Travellers</i></b>
+                                            <div class="calc-price">
+                                                <ul>
+                                                    <li><b>1 Adult </b></li>
+                                                    <li> ($ <b>1,700.00</b>/person)</li>
+                                                </ul>
+                                                <b>$1,700.00</b>
+                                            </div>
+                                            <div id="total-Price" class="total-price">
+                                                Total : $<b>1,700.00</b>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

@@ -1,141 +1,20 @@
-/* Toggle Header */
-
-function toggleHeader() {
-    let $bar = document.getElementById('fa-bars');
-    let $headerMenu = document.getElementById('headerMenu');
-
-    $bar.addEventListener('click', function () {
-        $headerMenu.classList.toggle('toggle-display');
-    })
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id');
+function requestCheckout() {
+    window.location.assign('http://127.0.0.1:5500/checkout.html?id=' + id);
 }
-
-toggleHeader();
-
-
-/* Show Password */
-
-function showPassword() {
-    let $showSignUpPassword = document.getElementById('showSignUpPassword');
-    let $signUpPassword = document.getElementById('signUp-Password');
-
-    if ($signUpPassword.type === "text") {
-        $signUpPassword.type = "password";
-        $showSignUpPassword.innerHTML = "visibility";
-    } else {
-        $signUpPassword.type = "text";
-        $showSignUpPassword.innerHTML = "visibility_off";
-
-    }
-}
-
-function showSignUpPassword() {
-    let $showConfirmPassword = document.getElementById('showConfirmPassword');
-    let $signUpConfirmPassword = document.getElementById('signUp-ConfirmPassword');
-
-    if ($signUpConfirmPassword.type === "text") {
-        $signUpConfirmPassword.type = "password";
-        $showConfirmPassword.innerHTML = "visibility";
-    } else {
-        $signUpConfirmPassword.type = "text";
-        $showConfirmPassword.innerHTML = "visibility_off";
-
-    }
-}
-
-
-/* Error Text */
-
-function logInErrorText() {
-    let $logInUsername = document.getElementById('logIn-username');
-    let $logInPassword = document.getElementById('logIn-password');
-    let $logInErrorText = document.getElementById('logIn-errorText');
-
-    if ($logInUsername.value == '') {
-        $logInErrorText.innerHTML = 'Username must not be blank';
-    }
-}
-
-function signUpUsernameErrorText() {
-    let $signUpUsername = document.getElementById('signUp-username');
-    let $usernameErrorText = document.getElementById('username-errorText');
-
-    if ($signUpUsername.value == '') {
-        $usernameErrorText.innerHTML = 'Username must not be blank.';
-    } else {
-        $usernameErrorText.innerHTML = '';
-    }
-}
-
-function signUpPasswordErrorText() {
-    let $signUpPassword = document.getElementById('signUp-Password');
-    let $signUpConfirmPassword = document.getElementById('signUp-ConfirmPassword');
-    let $passwordErrorText = document.getElementById('password-errorText');
-
-    if ($signUpPassword.value.length < 6) {
-        $passwordErrorText.innerHTML = 'Password must contain at least 6 characters.';
-    } else if ($signUpPassword.value !== $signUpConfirmPassword.value) {
-        $passwordErrorText.innerHTML = 'Confirm Password does not match.';
-    }
-    if ($signUpPassword.value.length >= 6 && $signUpPassword.value === $signUpConfirmPassword.value) {
-        $passwordErrorText.innerHTML = '';
-    }
-}
-
-// import { Delete } from "./admin";
-// console.log(id);
-
-// let users =
-// {
-//     "id": "",
-//     "userName": "",
-//     "displayname": "",
-//     "password": "",
-//     "avatar": "",
-//     "email": "",
-//     "phone": "",
-//     "address": "",
-//     "dob": "",
-//     "gender": false,
-//     "comment":
-//     {
-//         "desComment": "",
-//         "dateComment": "",
-//         "starComment": 0,
-//     },
-//     "role": "user",
-//     "tour": [
-//         {
-//             "code": "Code1",
-//             "tname": "Best tour of the year",
-//             "timg": [
-//                 "https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/jan-niclas-aberle-3094701-2-410x250.jpg"
-//             ],
-//             "description": [
-//                 "The Annapurna Circuit is a trek within the Annapurna mountain range of central Nepal.The total length of the route varies between 160–230 km (100-145 mi), depending on where motor transportation is used and where the trek is ended. This trek crosses two different river valleys and encircles the Annapurna massif. The path reaches its highest point at Thorung La pass (5416m/17769 ft), touching the edge of the Tibetan plateau."
-//             ],
-//             "price": 1500,
-//             "sale": 23,
-//             "location":
-//             {
-//                 "country": "Indial",
-//                 "city": "Bhutan, Nepal",
-//             },
-//             "activities": [
-//                 "Cultural Tours"
-//             ],
-//             "date": [],
-//             "view": 100,
-//         },
-//     ]
-// }
-// const tour = {
 
 fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
     .then((response) => response.json())
     .then((tours) => {
         let $item3 = document.getElementById('item-3');
+        let $tourById = document.getElementById("tourById");
+        let $tourPrice = document.getElementById('tour-price');
+        let $pricePerPerson = document.getElementById('price-per-person');
+        let $bookSummary = document.getElementById('booking-sumary');
 
-        for(let i = 0; i < 3; i++) {
+        for (let i = 0; i < 3; i++) {
             $item3.innerHTML += `
             <div class="featuredTrips-item__container">
                         <div class="imgPrice-container">
@@ -160,8 +39,62 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
                         </div>
                     </div>
             `
+
         }
+
+        for (let i = 0; i < tours.length; i++) {
+            if (tours[i].id == id) {
+                $tourById.innerHTML = `
+                    <div>
+                    <h1 class="trip-name">
+                    ${tours[i].tname}
+                </h1>
+                <div class="carousel">
+                    <img src="${tours[i].timg}"
+                        alt="">
+                </div>
+                <div class="description">
+                    <p>${tours[i].description}
+                    </p>
+                </div>
+                </div>
+                    `
+
+                $tourPrice.innerHTML = `
+                    <h5 class="saleAmount">
+                    ${tours[i].sale}% off
+                </h5>
+                <div class="price-item">
+                    <div class="actual-price">$ ${Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100}.00<span class="per-adult">per Adult</span></div>
+                    <div class="striked-price">From <span>$${tours[i].price}.00</span></div>
+                </div>
+                    `
+
+                $pricePerPerson.innerHTML = `
+                    <span class="actualPrice">$ ${Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100}.00<span class="per-person">/
+                    person</span></span>
+            <span class="strikedPrice">$${tours[i].price}.00</span>
+                    `
+
+                $bookSummary.innerHTML = `
+                    <h4 class="booking-summary-name">${tours[i].tname}</h4>
+                    <b><i>Travellers</i></b>
+                    <div class="calc-price">
+                        <ul>
+                            <li><b>1 Adult </b></li>
+                            <li> ($ <b>${Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100}.00</b>/person)</li>
+                        </ul>
+                        <b>$ ${Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100}.00</b>
+                    </div>
+                    <div id="totalPrice" class="total-price">
+                        Total : $ ${Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100}.00</b>
+                    </div>
+                    `
+            }
+        }
+
     });
+
 
 
 function changeValue() {
@@ -169,6 +102,7 @@ function changeValue() {
     let $increaseBtn = document.getElementById('increase-btn');
     let $tripNumber = document.getElementById('trip-number');
     let $tripNumberValue = Number($tripNumber.value);
+    let $totalPrice = document.getElementById("totalPrice");
 
     if ($tripNumberValue < 1) {
         $decreaseBtn.disabled = true;
@@ -177,12 +111,33 @@ function changeValue() {
     $increaseBtn.addEventListener('click', function () {
         $tripNumber.value = ++$tripNumberValue;
         console.log($tripNumberValue);
+
         if ($tripNumberValue < 1) {
             $decreaseBtn.disabled = true;
         }
         if ($tripNumberValue >= 1) {
             $decreaseBtn.disabled = false;
         }
+
+        fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
+            .then((response) => response.json())
+            .then((tours) => {
+                let stringPrice = "";
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const id = urlParams.get('id');
+                for (let i = 0; i < tours.length; i++) {
+                    if (tours[i].id == id) {
+                        let Price = (Math.round(((tours[i].price) * (100 - tours[i].sale) / 100) / 100) * 100) * $tripNumberValue;
+                        localStorage.setItem("totalPrice", Price)
+
+                        $totalPrice.innerHTML += `
+                Total : $ ${localStorage.getItem("totalPrice")}.00</b>
+                `
+                    }
+
+                }
+            });
     })
 
     $decreaseBtn.addEventListener('click', function () {
@@ -201,12 +156,12 @@ changeValue();
 
 function tabContentDisplay() {
     let $overview = document.getElementById('overview');
-    let $itinerary =document.getElementById('itinerary');
+    let $itinerary = document.getElementById('itinerary');
     let $cost = document.getElementById('cost');
     let $FAQs = document.getElementById('FAQs');
     let $tabContent = document.getElementById('tabContent');
 
-    $itinerary.addEventListener('click', function() {
+    $itinerary.addEventListener('click', function () {
         $tabContent.innerHTML = `
         <div class="itinerary-content">
         <p>Day 1 : Kathmandu to Pokhara (By flight or Bus)</p>
@@ -267,7 +222,7 @@ function tabContentDisplay() {
         `;
     })
 
-    $overview.addEventListener('click', function() {
+    $overview.addEventListener('click', function () {
         $tabContent.innerHTML = `<div class="overView-content">
         <p>Travel is the movement of people between relatively distant geographical locations, and can
             involve travel by foot, bicycle, automobile, train, boat, bus, airplane, or other means,
@@ -286,7 +241,7 @@ function tabContentDisplay() {
             torture called the tripalium (in Latin it means “three stakes”, as in to impale).</p>`;
     })
 
-    $cost.addEventListener('click', function() {
+    $cost.addEventListener('click', function () {
         $tabContent.innerHTML = `
         <h2 class="tab-title">The Trip Cost Includes</h2>
                             <div class="tab-underline"></div>
@@ -341,7 +296,7 @@ function tabContentDisplay() {
         `;
     })
 
-    $FAQs.addEventListener('click', function() {
+    $FAQs.addEventListener('click', function () {
         $tabContent.innerHTML = `
         <h2 class="tab-title">Frequently asked Questions</h2>
                         <div class="tab-underline"></div>

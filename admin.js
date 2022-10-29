@@ -247,7 +247,6 @@ function deleteOrder(orderId) {
 }
 
 function viewDetail(id) {
-    console.log(id);
     let customer_id = 0;
     let tour_id = 0;
     let order_id = 0;
@@ -276,7 +275,7 @@ function viewDetail(id) {
                 .then((response) => response.json())
                 .then((dataOrder) => {
                     for (let i = 0; i < dataOrder.length; i++) {
-                        if (dataOrder[i].id == order_id) {
+                        if (dataOrder[i].order_id == order_id) {
                             customer_id = dataOrder[i].customer_id;
                             tour_id = dataOrder[i].tour_id;
                         }
@@ -304,7 +303,6 @@ function viewDetail(id) {
                                             <span class="value col-md-6">${dataCustomer[i].phone}</span>
                                         </div>
                                             `
-                                    console.log(dataCustomer[i].name)
 
                                 }
                             }
@@ -332,7 +330,6 @@ function viewDetail(id) {
                                         </div>
                                    
                                           `
-                                    console.log(dataTour[i].code)
 
                                 }
                             }

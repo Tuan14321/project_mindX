@@ -13,7 +13,7 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
                         <div class="destinations-pic-content">
                             <h3 class="destinations-pic-title">${data[i].location}</h3>
                             <p class="destinations-pic-text">${data[i].description}</p>
-                            <a href="../Phong/TripSorting.html" class="destinations-pic-a">View Detail</a>                              
+                            <a href="/TripSorting.html" class="destinations-pic-a">View Detail</a>                              
                         </div>
                     </div>
         `
