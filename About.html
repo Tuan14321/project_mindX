@@ -20,142 +20,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <!-- Header -->
-
-    <header>
-        <img class="header__logo"
-            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-
-        <nav id="headerMenu" class="header__menu">
-            <ul class="header__menu--list">
-                <li>
-                    <a class="header__menu--items" href="">Home </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Trips Filter </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">ABout Us </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Blog </a>
-                </li>
-                <li>
-                    <a class="header__menu--items" href="">Contact </a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav class="header__account">
-            <ul class="header__account--list">
-                <i id="fa-bars" class="fa-solid fa-bars"></i>
-                <li title="Notification" class="header__account--item">
-                    <i class="fa-solid fa-bell"></i>
-                </li>
-                <li title="Account" class="header__account--item">
-                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-    <!-- Sign In/ Sign Up Modal -->
-
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Log In</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body logIn-modal-body">
-                    <form class="logIn-form" action="">
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="username">Username</label>
-                            <input class="logIn-input" id="logIn-username" type="text">
-                        </div>
-                        <div class="form-item-container">
-                            <label class="logIn-label" for="password">Password</label>
-                            <input class="logIn-input" id="logIn-password" type="password">
-                        </div>
-                        <div id="logIn-errorText" class="errorText">Incorrect Username or Password</div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <div class="logIn-btn-container">
-                        <a onclick="logInErrorText()" class="logIn-btn">Log In</a>
-                    </div>
-                    <div class="InsignUp-btn-container">
-                        Don't have an account?
-                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal">
-                            Sign Up Here
-                        </button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
+    <div id="headerLogin">
+        
     </div>
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-header-logo"
-                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
-                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body signUp-modal-body">
-                    <form action="register">
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-username">Username<span
-                                    style="color: red;">*</span></label>
-                            <input class="signUp-input" id="signUp-username" type="username">
-                        </div>
-                        <div id="username-errorText" class="errorText"></div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-password">Password<span
-                                    style="color: red;">*</span></label>
-                            <input id="signUp-Password" class="signUp-input" id="signUp-password" type="password">
-                            <span onclick="showPassword()" id="showSignUpPassword"
-                                class="material-icons-outlined">visibility</span>
-                        </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-ConfirmPassword">Confirm Password <span
-                                    style="color: red;">*</span></label>
-                            <input id="signUp-ConfirmPassword" class="signUp-input" type="password">
-                            <span onclick="showSignUpPassword()" id="showConfirmPassword"
-                                class="material-icons-outlined">visibility</span>
-                        </div>
-                        <div class="form-item-container">
-                            <label class="signUp-label" for="signUp-accountName">Account Name:</label>
-                            <input class="signUp-input" id="signUp-accountName" type="text">
-                        </div>
-                        <div id="password-errorText" class="errorText"></div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a onclick="signUpUsernameErrorText(), signUpPasswordErrorText()" class="signUp-btn">
-                        Sign Up
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- End Header -->
 
     <!-- Your Content Here -->
@@ -649,5 +522,6 @@
                 </div>
             </div>
 </body>
+<script src="header.js"></script>
 
 </html>

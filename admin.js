@@ -217,9 +217,9 @@ function loadCustomerData() {
         .then((data) => {
             let stringHTML = '';
             for (let i = 0; i < data.length; i++) {
-
-                stringHTML +=
-                    `
+                if (data[i].role == "user") {
+                    stringHTML +=
+                        `
                     <tr id = "acc${data[i].id}">
                     <td>${data[i].id}</td>
                     <td>${data[i].username}</td>
@@ -228,6 +228,7 @@ function loadCustomerData() {
             <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#accountModal" onclick="viewDetail(${data[i].id})">Detail</button></td>
                 </tr>
         `
+                }
             }
             $accountData.innerHTML = stringHTML;
         });

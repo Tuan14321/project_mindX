@@ -1,3 +1,11 @@
+let role = localStorage.getItem("role");
+let status = localStorage.getItem("status");
+if (status == null) {
+    window.location.assign("http://127.0.0.1:5500/index.html");
+    alert("Must be login");
+} 
+
+
 function showHeader() {
     let $headerLogin = document.getElementById('headerLogin');
     let stringHeader = "";
@@ -16,19 +24,19 @@ function showHeader() {
                 <nav id="headerMenu" class="header__menu">
                     <ul class="header__menu--list">
                         <li>
-                            <a class="header__menu--items" href="">Home </a>
+                            <a class="header__menu--items" href="home.html">Home </a>
                         </li>
                         <li>
-                            <a class="header__menu--items" href="">Trips Filter </a>
+                            <a class="header__menu--items" href="TripSorting.html">Trips Filter</a>
                         </li>
                         <li>
-                            <a class="header__menu--items" href="">ABout Us </a>
+                            <a class="header__menu--items" href="About.html">ABout Us </a>
                         </li>
                         <li>
                             <a class="header__menu--items" href="">Blog </a>
                         </li>
                         <li>
-                            <a class="header__menu--items" href="">Contact </a>
+                            <a class="header__menu--items" href="contact.html">Contact </a>
                         </li>
                     </ul>
                 </nav>
@@ -42,7 +50,7 @@ function showHeader() {
                         <li title="${data[i].name}" class="header__account--item">
                             <a class="btn btn-primary user-btn"
                                 role="button">
-                                <img src="${data[i].avt}">
+                                <img onclick="logOut()" class="avt-login" src="${data[i].avt}">
                             </a>
                         </li>
                     </ul>
@@ -54,17 +62,22 @@ function showHeader() {
             $headerLogin.innerHTML = stringHeader;
         });
 }
-showHeader();
-function toggleHeader() {
-    let $bar = document.getElementById('fa-bars');
-    let $headerMenu = document.getElementById('headerMenu');
-
-    $bar.addEventListener('click', function () {
-        $headerMenu.classList.toggle('toggle-display');
-    })
+function logOut() {
+    localStorage.clear();
+    window.location.assign("http://127.0.0.1:5500/index.html")
 }
+showHeader();
 
-toggleHeader();
+// function toggleHeader() {
+//     let $bar = document.getElementById('fa-bars');
+//     let $headerMenu = document.getElementById('headerMenu');
+//     console.log($bar);
+//     $bar.addEventListener('click', function () {
+//         $headerMenu.classList.toggle('toggle-display');
+//     })
+// }
+
+// toggleHeader();
 
 
 

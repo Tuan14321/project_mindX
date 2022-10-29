@@ -21,6 +21,7 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
     $data.innerHTML = string;
   }
   );
+    
 
   let $data2 = document.getElementsByClassName("container-tours")[0];
   fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
@@ -29,7 +30,7 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
       let string = "";
       for(let i = 0; i < 6; i++) {
           string += `
-          <div class="tours-1">
+          <div onclick = "requestToDetail(${data2[i].id})" class="tours-1">
     <div class="tour-sale">${data2[i].sale}% Off</div>
     <div class="tours-pic">
         <img onclick="requestDetail(${data2[i].id})" class="tours-picture" src="${data2[i].timg}" alt="">
@@ -44,8 +45,8 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
             8 days - 7 nights
         </div>
         <div class="tours-price">
-            <span class="actual-price">$1,300</span>
-            <span class="discounted-price price-color">$1,200</span>    
+            <span class="actual-price">$${data2[i].price}</span>
+            <span class="discounted-price price-color">$${Math.round(((data2[i].price) * (100 - data2[i].sale) / 100) / 100) * 100}</span>    
         </div>
     </div>
 </div>
@@ -55,5 +56,8 @@ fetch('https://6356495a9243cf412f80d35a.mockapi.io/api/travling/tours')
     }
     );
 
+    function requestToDetail(id){
+        window.location.assign("http://127.0.0.1:5500/detail.html?id=" + id)
+    }
 
     

@@ -186,10 +186,6 @@ header {
     margin-right: 20px;
 }
 
-.signUp-label {
-    font-size: ;
-}
-
 .signUp-input {
     align-self: flex-end;
     width: 250px;
@@ -229,7 +225,7 @@ header {
 .tripSort-description-container {
     background-color: #fff;
     margin-top: 50px;
-    padding: 40px 30px 50px 30px;
+    padding: 40px 30px 70px 30px;
     box-sizing: border-box;
 }
 
@@ -261,8 +257,6 @@ header {
     flex: 1;
     padding: 25px 17px;
     box-sizing: border-box;
-    position: sticky;
-    top: 0;
 }
 
 .criteria-title-container {
@@ -486,6 +480,8 @@ header {
     border-top: 1px solid rgba(0,0,0,.1);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .availableTime__text {
@@ -497,10 +493,15 @@ header {
 .calendar {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 500px;
+    width: 450px;
     font-size: 13px;
+    position: absolute;
+    left: -10px;
+    margin-top: 10px;
 }
+
 
 .viewDetail-btn {
     width: 140px;
@@ -786,4 +787,180 @@ footer {
         height: auto;
     }
 
+}
+
+@media screen and (max-width: 1200px) {
+    .location-and-length {
+        padding: 0;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .tripInfor__detail--location, .tripInfor__detail--length {
+        padding: 0;
+        margin: 0;
+        width: 100px;
+    }
+
+    .tripItem__img {
+        height: 70%;
+    }
+
+    .tripInfor-container {
+        padding: 0;
+    }
+    
+    .tripInfor__detail--price {
+        padding: 20px 5px;
+    }
+
+    .actual-price {
+        font-size: 25px;
+    }
+
+    .availableTime__text {
+        font-size: 13px;
+    }
+
+    .calendar {
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+
+
+    .trip-description-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tripSort-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tripInfor__name {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .viewDetail-btn {
+        font-size: 13px;
+        width: 100px;
+        height: 30px;
+    }
+
+    .calendar {
+        width: 300px;
+        font-size: 10px;
+    }
+
+    .tripItem__img-container {
+        width: 80%;
+    }
+
+    .tripSort-item-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        padding: 20px;
+    }
+
+    .tripSort-content {
+        padding: 0;
+    }
+
+    .tripSort-mainContainer {
+        padding: 0;
+    }
+
+    .trip-description-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tripSort-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tripInfor__name {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .viewDetail-btn {
+        font-size: 13px;
+        width: 100px;
+        height: 30px;
+    }
+
+    .calendar {
+        width: 300px;
+        font-size: 10px;
+    }
+
+    .tripItem__img-container {
+        width: 80%;
+    }
+
+    .tripSort-item-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .availableTime__text {
+        font-size: 10px;
+    }
+
+    .calendar {
+        width: 250px;
+        font-size: 8px;
+    }
+
+    .tripInfor__name {
+        font-size: 20px;
+    }
+
+    .price-holder {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .saleAmount {
+        font-size: 10px;
+        width: 60px;
+        height: 20px;
+        padding: 3px;
+    }
+
+    .actual-price {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tripItem__img-container {
+        width: 90%;
+    }
+    .viewDetail-btn {
+        font-size: 8px;
+        width: 70px;
+        height: 20px;
+    }
+
+    .availableTime__text {
+        font-size: 8px;
+    }
+
+    .trip-item-container {
+        padding: 10px;
+    }
 }
